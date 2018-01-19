@@ -22,15 +22,15 @@ public class StepBusinessCorreios {
 	private WebBrowserScreenElement viewElement;
 
 	private static Logger LOG = Logger.getLogger(StepBusiness.class);
-	
-	public boolean clicarEmProximo () {
+
+	public boolean clicarEmProximo() {
 		if (viewElement.getDriver().getPageSource().contains("javascript:document.Proxima.submit('Proxima')")) {
 			viewElement.click(viewElement.findElement(page.getLinkProximosResultados()));
 			return true;
 		}
 		return false;
 	}
-	
+
 	public void mudaDePagina() {
 		for (String windows : viewElement.getDriver().getWindowHandles()) {
 			viewElement.getDriver().switchTo().window(windows);
@@ -56,17 +56,16 @@ public class StepBusinessCorreios {
 		mudaDePagina();
 		do {
 			List<WebElement> listaElementos = viewElement.findElements(page.getLinhaDeResultadoDaBusca());
-			if(listaElementos.isEmpty()) {
+			if (listaElementos.isEmpty()) {
 				LOG.info("\nNenhum resultado encontrado");
-			}
-			else {
+			} else {
 				for (int c = 1; c < listaElementos.size(); c++) {
 					List<WebElement> colunas = listaElementos.get(c).findElements(By.tagName("td"));
-					if(colunas.get(0).getText().contains(stringBusca)) {
-						LOG.info("\n"+colunas.get(0).getText()+" CEP: " + colunas.get(3).getText());
+					if (colunas.get(0).getText().contains(stringBusca)) {
+						LOG.info("\n" + colunas.get(0).getText() + " CEP: " + colunas.get(3).getText());
 					}
 				}
-				
+
 			}
 		} while (clicarEmProximo());
 	}
@@ -75,14 +74,13 @@ public class StepBusinessCorreios {
 		mudaDePagina();
 		do {
 			List<WebElement> listaElementos = viewElement.findElements(page.getLinhaDeResultadoDaBusca());
-			if(listaElementos.isEmpty()) {
+			if (listaElementos.isEmpty()) {
 				LOG.info("\nNenhum resultado encontrado");
 				return false;
-			}
-			else {
+			} else {
 				for (int c = 1; c < listaElementos.size(); c++) {
 					List<WebElement> colunas = listaElementos.get(c).findElements(By.tagName("td"));
-					if(colunas.get(0).getText().contains(enderecoCorreto)) {
+					if (colunas.get(0).getText().contains(enderecoCorreto)) {
 						return true;
 					}
 				}
@@ -94,5 +92,40 @@ public class StepBusinessCorreios {
 	public void clicaEmCalculadorPrecosPrazos() {
 		viewElement.mouseOver(page.getCampoAbreMenuSuspenso());
 		viewElement.click(page.getLinkPrecosPrazos());
+	}
+
+	public void preencheCepOrigem(String cepOrigem) {
+		viewElement.sendText(page.getCampoCepOrigem(), cepOrigem);
+	}
+
+	public void preencheCepDestino(String cepDestino) {
+		viewElement.sendText(page.getCampoCepDestino(), cepDestino);
+	}
+
+	public void preencheTipoServico(String servico) {
+		viewElement.selectByVisibleText(page.getSelectServico(), servico);
+	}
+
+	public void selecionaFormato(String formato) {
+		switch (formato) {
+		case "caixa":
+			viewElement.click(page.getFiguraCaixa());
+			break;
+		case "rolo":
+			viewElement.click(page.getFiguraRolo());
+			break;
+		}
+	}
+
+	public void selecionaEmbalagem(String embalagem) {
+		viewElement.selectByVisibleText(page.getTipoEmbalagem(), embalagem);
+	}
+
+	public void selecionaTipoEmbalagem(String tipoEmbalagem) {
+		for (int i = 0; i < Integer.valueOf(tipoEmbalagem); i++) {
+			viewElement.click(page.getProximaEmbalagem());
+		}
+		viewElement.click(viewElement.findElement(By.xpath("//*[@id='spanTipoEmbalagem']/div/div[2]/div/div["
+				+ Integer.valueOf(tipoEmbalagem) + "]/div/p/button")));
 	}
 }

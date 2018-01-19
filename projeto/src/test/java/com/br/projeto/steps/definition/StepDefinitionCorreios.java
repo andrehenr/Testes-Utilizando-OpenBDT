@@ -50,4 +50,35 @@ public class StepDefinitionCorreios {
 	public void clicoEmCalculadorPrecosPrazos() {
 		stepB.clicaEmCalculadorPrecosPrazos();
 	}
+	
+	@When("^insiro o cep de origem \"([^\"]*)\"$")
+	public void insiroCepOrigem(String cepOrigem){
+	    stepB.preencheCepOrigem(cepOrigem);
+	}
+
+	@When("^insiro o cep de destino \"([^\"]*)\"$")
+	public void insiroCepDestino(String cepDestino){
+	    stepB.preencheCepDestino(cepDestino);
+	}
+
+	@When("^seleciono o tipo de servico \"([^\"]*)\"$")
+	public void selecionoTipoServico(String servico){
+	    stepB.preencheTipoServico(servico);
+	}
+	
+	@When("^seleciona formato \"([^\"]*)\"$")
+	public void selecionaFormato(String formato) {
+		stepB.selecionaFormato(formato);
+	}
+	
+	@When("^seleciona origem de embalagem \"([^\"]*)\"$")
+	public void selecionaTipoEmbalagem(String embalagem) {
+		stepB.selecionaEmbalagem(embalagem);
+	}
+	
+	@When("^seleciona tipo de embalagem \"([^\"]*)\"$")
+	public void selecionaTamanhoEmbalagem(String tipoEmbalagem) {
+		stepB.selecionaTipoEmbalagem(tipoEmbalagem);
+	}
+	
 }
