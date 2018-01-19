@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Cadastrar um usuario no site Automation Practice","Cadastrar usuario um","SUCCESS","2018-01-18T11:58:41.335-02:00","0.0","48.24"
+"Buscar Endereco nos Correios passando CEP","Comeco o teste","SUCCESS","2018-01-19T11:04:34.115-02:00","0.0","12.09"
+"Buscar Endereco nos Correios passando CEP","Teste de Buscar Endereco nos Correios passando CEP","SUCCESS","2018-01-19T11:12:52.690-02:00","0.0","12.3"
+"Selecionar Precos e Prazos um CEP A a CEP B","Teste para Selecionar Precos e Prazos um CEP A a CEP B","SUCCESS","2018-01-19T11:39:11.161-02:00","0.0","12.15"
