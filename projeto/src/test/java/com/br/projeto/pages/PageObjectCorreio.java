@@ -1,5 +1,7 @@
 package com.br.projeto.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -66,15 +68,78 @@ public class PageObjectCorreio extends PageObject {
 	@FindBy(linkText = "Próxima")
 	private WebElement proximaEmbalagem;
 	
-	@FindBy(xpath = "//*[@id=\"spanTipoEmbalagem\"]/div/div[2]/div/div[3]/div/p/button")
-	private WebElement botaoTerceiraEmbalagemCorreios;
+	@FindBy(name = "valorDeclarado")
+	private WebElement campoValorDeclarado;
 	
-	public WebElement getProximaEmbalagem() {
-		return proximaEmbalagem;
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td")
+	private WebElement campoResultadoPrazo;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tfoot/tr/td")
+	private WebElement campoResultadoPreco;
+	
+	@FindBy(css = "#content-principais-servicos > ul > li:nth-child(4) > a > img")
+	private WebElement linkRedeAtendimento;
+	
+	@FindBy(name = "estadoAgencia")
+	private WebElement selectEstadoAgencia;
+	
+	@FindBy(name = "municipioAgencia")
+	private WebElement selectMunicipioAgencia;
+	
+	@FindBy(name = "bairroAgencia")
+	private WebElement selectBairroAgencia;
+	
+	@FindBy(id = "tableNomeAgencia")
+	private List<WebElement> nomesDasAgencias;
+	
+	@FindBy(css = ".dadosAgencia")
+	private List<WebElement> dadosDasAgencias;
+
+	@FindBy(id = "tipoBusca")
+	private List<WebElement> radioTipoBusca;
+	
+	public WebElement getSelectEstadoAgencia() {
+		return selectEstadoAgencia;
 	}
 
-	public WebElement getBotaoTerceiraEmbalagemCorreios() {
-		return botaoTerceiraEmbalagemCorreios;
+	public WebElement getSelectMunicipioAgencia() {
+		return selectMunicipioAgencia;
+	}
+
+	public WebElement getSelectBairroAgencia() {
+		return selectBairroAgencia;
+	}
+
+	public List<WebElement> getNomesDasAgencias() {
+		return nomesDasAgencias;
+	}
+
+	public List<WebElement> getDadosDasAgencias() {
+		return dadosDasAgencias;
+	}
+
+	public WebElement getLinkRedeAtendimento() {
+		return linkRedeAtendimento;
+	}
+
+	public List<WebElement> getRadioTipoBusca() {
+		return radioTipoBusca;
+	}
+	
+	public WebElement getCampoResultadoPrazo() {
+		return campoResultadoPrazo;
+	}
+
+	public WebElement getCampoResultadoPreco() {
+		return campoResultadoPreco;
+	}
+
+	public WebElement getCampoValorDeclarado() {
+		return campoValorDeclarado;
+	}
+
+	public WebElement getProximaEmbalagem() {
+		return proximaEmbalagem;
 	}
 
 	public WebElement getCampoCepOrigem() {

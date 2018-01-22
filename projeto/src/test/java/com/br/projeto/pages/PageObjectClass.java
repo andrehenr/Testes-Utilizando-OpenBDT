@@ -97,7 +97,6 @@ public class PageObjectClass extends PageObject{
 	
 	@FindBy(xpath = "//div[@id='center_column']/h1")
 	private WebElement tituloMyAccount;
-	
 
 	public WebElement getTituloMyAccount() {
 		return tituloMyAccount;

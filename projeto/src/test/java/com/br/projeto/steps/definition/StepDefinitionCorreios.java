@@ -66,19 +66,89 @@ public class StepDefinitionCorreios {
 	    stepB.preencheTipoServico(servico);
 	}
 	
-	@When("^seleciona formato \"([^\"]*)\"$")
+	@When("^seleciono formato \"([^\"]*)\"$")
 	public void selecionaFormato(String formato) {
 		stepB.selecionaFormato(formato);
 	}
 	
-	@When("^seleciona origem de embalagem \"([^\"]*)\"$")
+	@When("^seleciono origem de embalagem \"([^\"]*)\"$")
 	public void selecionaTipoEmbalagem(String embalagem) {
 		stepB.selecionaEmbalagem(embalagem);
 	}
 	
-	@When("^seleciona tipo de embalagem \"([^\"]*)\"$")
+	@When("^seleciono tipo de embalagem \"([^\"]*)\"$")
 	public void selecionaTamanhoEmbalagem(String tipoEmbalagem) {
 		stepB.selecionaTipoEmbalagem(tipoEmbalagem);
+	}
+	
+	@When("^seleciono peso do envio \"([^\"]*)\"$")
+	public void seleciono_peso_do_envio(String peso){
+	    stepB.selecionarPesoEnvio(peso);
+	}
+
+	@When("^seleciono opcao Mao Propria \"([^\"]*)\"$")
+	public void seleciono_opcao_Mao_Propria(String maoPropria) {
+	    stepB.selecionarMaoPropria(maoPropria);
+	}
+
+	@When("^seleciono opcao Aviso de recebimento \"([^\"]*)\"$")
+	public void seleciono_opcao_Aviso_de_recebimento(String avisoRecebimento){
+	    stepB.selecionarAvisoRecebimento(avisoRecebimento);
+	}
+
+	@When("^seleciono opcao Declaracao de Valor \"([^\"]*)\"\"([^\"]*)\"$")
+	public void seleciono_opcao_Declaracao_de_Valor(String stringBooleana, String valor){
+	    stepB.selecionarDeclaracaoValor(stringBooleana, valor);
+	}
+
+	@When("^clico em Enviar$")
+	public void clico_em_Enviar(){
+	    stepB.clicarEmEnviar();
+	}
+	
+	@Then("^exibo preco e prazo$")
+	public void exibo_preco_e_prazo() {
+		stepB.exibirPrecoPrazo();
+	}
+	
+	@When("^clico na opcao Rede de Atendimento$")
+	public void clico_na_opcao_Rede_de_Atendimento(){
+	    stepB.clicarEmRedeDeAtendimento();
+	}
+	
+	@When("^seleciono o tipo de busca por localidade$")
+	public void seleciono_o_tipo_de_busca(){
+	    stepB.selecionarTipoBusca();
+	}
+	
+	@When("^seleciono estado da agencia \"([^\"]*)\"$")
+	public void seleciono_estado_da_agencia(String estado){
+	    stepB.selecionarEstadoAgencia(estado);
+	}
+
+	@When("^seleciono municipio da agencia \"([^\"]*)\"$")
+	public void seleciono_municipio_da_agencia(String municipio){
+	    stepB.selecionarMunicipioAgencia(municipio);
+	}
+
+	@When("^seleciono bairro da agencia \"([^\"]*)\"$")
+	public void seleciono_bairro_da_agencia(String bairro){
+	    stepB.selecionarBairroAgencia(bairro);
+	}
+
+	@Then("^exibo agencias encontradas$")
+	public void exibo_agencias_encontradas() {
+	    stepB.exibirAgencias();
+	}
+	
+	@When("^insiro o cep da RSI OSASCO \"([^\"]*)\"$")
+	public void insiro_o_cep_da_RSI_OSASCO(String cepRSIOsasco) {
+		stepB.preencheCepOrigem(cepRSIOsasco);
+	}
+	
+	@When("^insiro o cep da RSI ALPHAVILLE \"([^\"]*)\"$")
+	public void insiro_o_cep_da_RSI_ALPHAVILLE(String cepRSIAlphaville) {
+		stepB.preencheCepDestino(cepRSIAlphaville);
 	}
 	
 }

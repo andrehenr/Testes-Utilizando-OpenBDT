@@ -31,11 +31,11 @@ public class StepBusinessCorreios {
 		return false;
 	}
 
-	public void mudaDePagina() {
+	public void mudaDePagina(WebElement elementoEsperado) {
 		for (String windows : viewElement.getDriver().getWindowHandles()) {
 			viewElement.getDriver().switchTo().window(windows);
 		}
-		viewElement.waitForElementIsPresent(30, page.getMensagemDeBusca());
+		if(elementoEsperado != null) viewElement.waitForElementIsPresent(30, elementoEsperado);
 	}
 
 	public void abreSiteCorreios() {
@@ -53,7 +53,7 @@ public class StepBusinessCorreios {
 	}
 
 	public void analisaResultadosPesquisaEndereco() {
-		mudaDePagina();
+		mudaDePagina(page.getMensagemDeBusca());
 		do {
 			List<WebElement> listaElementos = viewElement.findElements(page.getLinhaDeResultadoDaBusca());
 			if (listaElementos.isEmpty()) {
@@ -71,7 +71,7 @@ public class StepBusinessCorreios {
 	}
 
 	public boolean analisaResultadosPesquisaCep(String enderecoCorreto) {
-		mudaDePagina();
+		mudaDePagina(page.getMensagemDeBusca());
 		do {
 			List<WebElement> listaElementos = viewElement.findElements(page.getLinhaDeResultadoDaBusca());
 			if (listaElementos.isEmpty()) {
@@ -122,10 +122,85 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionaTipoEmbalagem(String tipoEmbalagem) {
-		for (int i = 0; i < Integer.valueOf(tipoEmbalagem); i++) {
+		for (int i = 0; i < Integer.valueOf(tipoEmbalagem) - 1; i++) {
 			viewElement.click(page.getProximaEmbalagem());
 		}
-		viewElement.click(viewElement.findElement(By.xpath("//*[@id='spanTipoEmbalagem']/div/div[2]/div/div["
-				+ Integer.valueOf(tipoEmbalagem) + "]/div/p/button")));
+		viewElement.waitAndClick(
+				viewElement.findElement(By.cssSelector("#spanTipoEmbalagem > div > div.window > div > div:nth-child("
+						+ Integer.valueOf(tipoEmbalagem) + ") > div > p > button")),20);
+	}
+
+	public void selecionarPesoEnvio(String peso) {
+		viewElement.selectByVisibleText(page.getSelectPeso(), peso);
+	}
+
+	public void selecionarMaoPropria(String maoPropria) {
+		this.selecionarCheckBox(page.getCheckMaoPropria(),maoPropria);
+	}
+
+	private boolean selecionarCheckBox(WebElement checkBox, String stringBooleana) {
+		if(stringBooleana.equals("true")) { 
+			viewElement.click(checkBox);
+			return true;
+		}
+		return false;
+	}
+
+	public void selecionarAvisoRecebimento(String avisoRecebimento) {
+		this.selecionarCheckBox(page.getCheckAvisoRecebimento(), avisoRecebimento);
+	}
+
+	public void selecionarDeclaracaoValor(String stringBooleana, String valor) {
+		if(this.selecionarCheckBox(page.getCheckDeclaracaoValor(), stringBooleana)) {
+			viewElement.sendText(page.getCampoValorDeclarado(), valor);
+		}
+	}
+	
+	public void clicarEmEnviar() {
+		viewElement.click(page.getBotaoCalcular());
+		this.mudaDePagina(null);
+	}
+
+	public void exibirPrecoPrazo() {
+		LOG.info("Prazo: "+viewElement.getText(page.getCampoResultadoPrazo())+"\nPreço: "+viewElement.getText(page.getCampoResultadoPreco()));
+	}
+
+	public void clicarEmRedeDeAtendimento() {
+		viewElement.click(page.getLinkRedeAtendimento());
+	}
+
+	public void selecionarTipoBusca() {
+		if(!page.getRadioTipoBusca().get(1).isSelected()) {
+			viewElement.click(page.getRadioTipoBusca().get(1));
+		}
+	}
+
+	public void selecionarEstadoAgencia(String estado) {
+		viewElement.selectByVisibleText(page.getSelectEstadoAgencia(), estado);
+	}
+
+	public void selecionarMunicipioAgencia(String municipio) {
+		viewElement.selectByVisibleText(page.getSelectMunicipioAgencia(),municipio);
+	}
+
+	public void selecionarBairroAgencia(String bairro) {
+		viewElement.click(page.getSelectBairroAgencia());
+		viewElement.selectByVisibleText(page.getSelectBairroAgencia(), bairro);
+	}
+
+	public void exibirAgencias() {
+		int agencia = 1;
+		for(WebElement w: page.getNomesDasAgencias()) {
+			LOG.info("\nAgência: "+w.getText());
+			w.findElement(By.tagName("a")).click();
+			List<WebElement> dadosAgencia = viewElement.findElements(By.xpath("//*[@id='detalheAgencia"+agencia+"']/tbody/tr"));
+			LOG.info("Dados Agência:");
+			int i = 0;
+			while(!dadosAgencia.get(i).getText().contains("Dados") && i < 18) {
+				LOG.info(dadosAgencia.get(i).getText());
+				i++;
+			}
+			agencia++;
+		}
 	}
 }

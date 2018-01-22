@@ -1,0 +1,848 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" class=" js"><head><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+</style><link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" /><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style-pbc{transition:opacity ease-in-out;background-color:rgba(0,0,0,0.45);text-align:center}.gm-style-pbt{font-size:22px;color:white;font-family:Roboto,Arial,sans-serif;position:relative;margin:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+</style><meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" style="">/* &lt;![CDATA[ */_cf_loadingtexthtml="&lt;img alt=' ' src='/cfscripts2/ajax/resources/cf/images/loading.gif'/&gt;";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cfscripts2/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=8578;
+_cf_flash_policy_port=1244;
+_cf_clientid='ED09E27B5AF49F6A7A3D13AF32F9BD2A';/* ]]&gt; */</script><script type="text/javascript" src="/cfscripts2/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cfscripts2/ajax/package/cfajax.js"></script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFAJAXPROXY');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	var _cf_cfcAgencia=ColdFusion.AjaxProxy.init('/sistemas/agencias/cfc/cfcAgencia.cfc','ProxyAjax');
+	_cf_cfcAgencia.prototype.getAgenciasProximas=function(latitude,longitude) { return ColdFusion.AjaxProxy.invoke(this, "getAgenciasProximas","65EF4C849E50929C", {latitude:latitude,longitude:longitude});};
+	_cf_cfcAgencia.prototype.getBairro=function(UF,municipio) { return ColdFusion.AjaxProxy.invoke(this, "getBairro","65EF4C849E50929C", {UF:UF,municipio:municipio});};
+	_cf_cfcAgencia.prototype.getUF=function() { return ColdFusion.AjaxProxy.invoke(this, "getUF","65EF4C849E50929C", {});};
+	_cf_cfcAgencia.prototype.getMunicipio=function(UF) { return ColdFusion.AjaxProxy.invoke(this, "getMunicipio","65EF4C849E50929C", {UF:UF});};
+/* ]]&gt; */</script>
+<script type="text/javascript" src="/cfscripts2/cfform.js"></script>
+<script type="text/javascript" src="/cfscripts2/masks.js"></script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1" />
+<meta http-equiv="Content-Language" content="pt" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>home</title>
+<meta name="description" content="[page]" />
+<meta name="keywords" content="" />
+<script type="text/javascript"> 
+pageid = '09EEC128-5056-9163-892E41DCA59EAEC9'; 
+</script>
+<noscript>
+&lt;p&gt;identificador da pÃ¡gina&lt;/p&gt;
+</noscript>
+<base href="http://www2.correios.com.br/" /> 
+<link rel="icon" href="home2014/img/icon.png" type="image/gif" />
+
+<!-- scripts --><noscript>&lt;p&gt;Biblioteca de efeitos&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-1.6.2.min.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para menus&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/ddaccordion.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos para tabbes&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jtabber.js"></script>
+    <noscript>&lt;p&gt;Biblioteca de efeitos colorbox&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery.colorbox-min.js"></script>
+   <noscript>&lt;p&gt;Biblioteca de validação de formulários&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/validations.js"></script>
+
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>
+  <script type="text/javascript" src="home2014/js/scripts.js"></script>
+  <noscript>&lt;p&gt;Script Javascript&lt;/p&gt;</noscript>   
+  <script type="text/javascript" src="home2014/js/cookie.js"></script>
+    <noscript>&lt;p&gt;&lt;/p&gt;Script Javascript</noscript>   
+<script type="text/javascript">document.documentElement.className += " js";</script>
+  <noscript>&lt;p&gt;Controle de abas&lt;/p&gt;</noscript>
+ <noscript>&lt;p&gt;Biblioteca de animações&lt;/p&gt;</noscript> 
+  <script type="text/javascript" src="home2014/js/jquery-ui-1.8.16.custom.min.js">
+  </script>  
+   <script type="text/javascript">
+   jQuery(function($){
+        $.datepicker.regional['pt-BR'] = {
+                closeText: 'Fechar',
+                prevText: '&amp;#x3c;Anterior',
+                nextText: 'Pr&amp;oacute;ximo&amp;#x3e;',
+                currentText: 'Hoje',
+                monthNames: ['Janeiro','Fevereiro','Mar&amp;ccedil;o','Abril','Maio','Junho',
+                'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+                'Jul','Ago','Set','Out','Nov','Dez'],
+                dayNames: ['Domingo','Segunda-feira','Ter&amp;ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                dayNamesMin: ['Dom','Seg','Ter','Qua','Qui','Sex','Sab'],
+                weekHeader: 'Sm',
+                dateFormat: 'dd/mm/yy',
+                firstDay: 0,
+                isRTL: false,
+                showMonthAfterYear: false,
+                yearSuffix: ''};
+        $.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+});
+</script>
+  
+    
+
+<!-- /scripts -->
+
+<!-- CSS -->
+
+  <link href="home2014/css/layout.css" rel="stylesheet" type="text/css" />
+<!-- /CSS --->
+ 
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_383269687555756=function()
+	{
+		ColdFusion.Bind.register([],{'bindTo':'estadoAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getUF','_cf_ajaxproxytoken':'65EF4C849E50929C','bindExpr':[]},ColdFusion.Bind.cfcBindHandler,true);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_383269687555756);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_383269687555757=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change']],{'bindTo':'municipioAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getMunicipio','_cf_ajaxproxytoken':'65EF4C849E50929C','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_383269687555757);
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_383269687555758=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','formBuscaAgencia','change'],['municipioAgencia','formBuscaAgencia','change']],{'bindTo':'bairroAgencia','bindToAttr':'value','cfc':'/sistemas/agencias/cfc/cfcAgencia.cfc','cfcFunction':'getBairro','_cf_ajaxproxytoken':'65EF4C849E50929C','bindExpr':[['UF','estadoAgencia','formBuscaAgencia','value'],['MUNICIPIO','municipioAgencia','formBuscaAgencia','value']]},ColdFusion.Bind.cfcBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_383269687555758);
+/* ]]&gt; */</script>
+<script type="text/javascript">
+&lt;!--
+    _CF_checkformBuscaAgencia = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length &gt; 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//--&gt;
+</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	ColdFusion.Ajax.importTag('CFDIV');
+/* ]]&gt; */</script>
+
+<script type="text/javascript">/* &lt;![CDATA[ */
+	_cf_bind_init_383269687555759=function()
+	{
+		ColdFusion.Bind.register([['estadoAgencia','','change'],['municipioAgencia','','change'],['bairroAgencia','','change'],['selHorario','','change'],['ckbAtendimento','','change']],{'bindTo':'divDetalheAgencia','bindExpr':['sistemas/agencias/inc/divDetalheAgencia.cfm?uf=',['estadoAgencia','','value'],'&amp;municipio=',['municipioAgencia','','value'],'&amp;bairro=',['bairroAgencia','','value'],'&amp;horario=',['selHorario','','value'],'&amp;atendimento=',['ckbAtendimento','','value']]},ColdFusion.Bind.urlBindHandler,false);
+	};ColdFusion.Event.registerOnLoad(_cf_bind_init_383269687555759);
+/* ]]&gt; */</script>
+<script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/geocoder.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/infowindow.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/stats.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/AuthenticationService.Authenticate?1shttp%3A%2F%2Fwww2.correios.com.br%2Fsistemas%2Fagencias%2F&amp;4sAIzaSyASBQIKouehHj8AMNWp4MZgJrYju876Qcc&amp;callback=_xdc_._m3168a&amp;token=26735"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/marker.js"></script><style type="text/css">.gm-style {
+        font: 400 11px Roboto, Arial, sans-serif;
+        text-decoration: none;
+      }
+      .gm-style img { max-width: none; }</style><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d-22.13579691092483&amp;2d-43.24107878703967&amp;2m2&amp;1d-22.098822413148085&amp;2d-43.1790570488335&amp;2u15&amp;4spt-BR&amp;5e0&amp;6sm%40408000000&amp;7b0&amp;8e0&amp;callback=_xdc_._bn5ijq&amp;token=344"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/29/14b/intl/pt_br/controls.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i15!2i12450!3i18448!1m4!1m3!1i15!2i12450!3i18449!1m4!1m3!1i15!2i12451!3i18448!1m4!1m3!1i15!2i12451!3i18449!2m3!1e0!2sm!3i408105998!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e3!12m1!5b1&amp;callback=_xdc_._7l7x5c&amp;token=51984"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/ViewportInfoService.GetViewportInfo?1m6&amp;1m2&amp;1d-22.15939698542038&amp;2d-43.127467009887425&amp;2m2&amp;1d-22.122428881526933&amp;2d-43.06545599690486&amp;2u15&amp;4spt-BR&amp;5e0&amp;6sm%40408000000&amp;7b0&amp;8e0&amp;callback=_xdc_._i03l0y&amp;token=59893"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/vt?pb=!1m4!1m3!1i15!2i12460!3i18450!1m4!1m3!1i15!2i12460!3i18451!1m4!1m3!1i15!2i12461!3i18450!1m4!1m3!1i15!2i12461!3i18451!1m4!1m3!1i15!2i12462!3i18450!1m4!1m3!1i15!2i12462!3i18451!1m4!1m3!1i15!2i12460!3i18452!1m4!1m3!1i15!2i12461!3i18452!1m4!1m3!1i15!2i12462!3i18452!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e3!12m1!5b1&amp;callback=_xdc_._ubha5w&amp;token=108907"></script></head>
+<!--[if lt IE 7]> <body class="ie6"> <![endif]-->
+<!--[if IE 7]>    <body class="ie7"> <![endif]-->
+<!--[if IE 8]>    <body class="ie8"> <![endif]-->
+<!--[if !IE]>-->  <body><span></span>             <!--<![endif]-->
+<div class="back">
+
+<div class="acessibilidade">
+  <div class="wrap">
+    <ul>
+      
+        <li class="tocontent"> <span class="separator-bar"> </span> <a href="javascript:void(0);" onclick="document.location.hash='ancora';" title="Ir para o conteúdo principal da página">Ir ao  conteúdo</a> </li>
+        <li class="font-plus" id="biggerFont"> <a href="javascript:void(0);" title="Aumentar o tamanho da fonte do texto">A</a> </li>
+        <li id="defaultFont"> <span class="separator-dot"> </span> <a href="javascript:void(0);" title="Retornar a fonte do texto para tamanho padrão">Tamanho padrão</a> <span class="separator-dot"> </span> </li>
+        <li class="font-minus" id="smallerFont"> <a href="javascript:void(0);" title="Diminuir o tamanho da fonte do texto">A</a> </li>
+        <li class="contrast" id="contrast"> <span class="separator-bar"> </span> <a href="javascript:void(0);" title="Modificar para o modo de alto contraste">Contraste</a> <span class="separator-bar"> </span> </li>
+        <li> <span class="separator-bar"> </span> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/">Teclado Virtual</a> </li>
+        <li> <a href="http://www.correios.com.br/sobre-correios/sustentabilidade/vertente-social/headmouse-e-teclado-virtual/" id="txt-headmouse">Headmouse</a></li>
+        
+    </ul>
+  </div>
+</div>
+ 
+<!-- header --->
+
+
+<div class="header">
+<h1 class="logo float-left"> <a href="http://www.correios.com.br" title="Ir para a página incial" alt="Logo Correios"><img src="home2014/img/layout/logo.png" alt="Ir para a página inicial" title="Ir para a página incial" /></a> </h1>
+<div class="acesso_rapido">
+
+  <div class="text-right">
+    
+    <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/fc">Fale com os Correios</a><br />
+  </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="0h">Outros sites</div>
+    <span class="dados abaaz" contentindex="0c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Acesse a outros sites dos Correios</span><br />
+      <a href="http://www.correios.com.br/para-voce"><b>Correios para você</b></a><br />
+      <a href="http://www.correios.com.br/para-sua-empresa"><b>Correios para sua empresa</b></a><br />
+      <a href="http://www.correios.com.br/sobre-correios"><b>Sobre Correios</b></a><br />
+      <a href="produtosaz/default.cfm?filtro=R/Z"><b>Espaço da Filatelia</b></a><br />
+      <a href="http://blog.correios.com.br/correios"><b>Blog Institucional do Correios</b></a><br />
+      <a href="http://m.correios.com.br"><b>Correios mobile</b></a><br />
+    </div>
+    </span> </div>
+  <div class="produtosaz float-right">
+    <div class="expo" headerindex="1h">Correios de A a Z</div>
+    <span class="dados abaaz" contentindex="1c" style="display: none;">
+    <div class="dadosaz"> <span class="dica"> Escolha pela letra inicial dos nossos produtos, serviços e assuntos.<br />
+      </span><br />
+      <a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1"><b>Todos os itens</b></a><br />
+      <a href="http://www.correios.com.br/para-voce/correios-de-a-a-z?filtro=abc"><b>Correios de A-C</b></a><br />
+      <a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=def"><b>Correios de D-F</b></a><br />
+      <a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=ghijklmnopq"><b>Correios de G-Q</b></a><br />
+      <a href="http://www.correios.com.br/para-voce/correios-de-a-a-z-1?filtro=rstuvwxyz"><b>Correios de R-Z</b></a> </div>
+    </span> </div>
+  </div>
+  <!-- acesso rápido -->
+  <br class="clr" />
+  </div>
+  <div class="tabs">
+  
+  <div class="wrap">
+    <ul class="tabs-list">
+      <li> <a href="http://www.correios.com.br/para-voce">
+        <h2>Você</h2>
+        </a> </li>
+      <li> <a href="http://www.correios.com.br/para-sua-empresa">
+        <h2>Sua Empresa</h2>
+        </a> </li>
+      <li> <a href="http://www.correios.com.br/Para-governo">
+        <h2>Governo</h2>
+        </a> </li>
+      <li> <a href="http://www.correios.com.br/sobre-correios">
+        <h2>Sobre Correios</h2>
+        </a> </li>
+      <li> <a href="http://www.correios.com.br/correios-online">
+        <h2>Correios On-line</h2>
+        </a> </li>
+      <li class="current"> <a href="default.cfm">
+        <h2>Sistemas</h2>
+        </a> </li>
+    </ul>
+  </div>
+   
+<!-- /header --->
+<div class="wrap">   
+<div class="content">
+<div class="laminas" style="display: block;">
+<div class="column1">
+<span class="mver"> 
+<span class="dominio"></span>
+<h3>Sistemas</h3>
+<ul>
+  <li><a href="sistemas/agencias/">Busca agências</a></li>
+</ul> 
+</span>
+<!-- Fim Menu vertical -->
+</div>
+<!-- column1 -->
+<div class="column2">
+<div class="breadcrumb"></div>
+<div class="content  trescolunas">
+<a name="ancora"></a>
+
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/cssAgencia.css" />
+<link rel="STYLESHEET" type="text/css" href="sistemas/agencias/css/validationEngine.jquery.css" />
+<div class="tituloimagem"><h3>Agências</h3> </div>
+<div class="quadroavisos">
+<p><strong>Restrição de acesso em Agências dos Correios</strong></p>
+<p>Agências localizadas dentro de prédios de terceiros, nos quais os Correios não possuem ingerências, podem possuir regras específicas para acesso, que deverão ser atendidas pelo cliente.</p>
+<p>A seguir, listamos algumas agências que possuem esta restrição:</p>
+<p>Distrito Federal:<br />- AC Palácio do Planalto<br />- AC Quartel General do Exército<br />- AC STF<br />- AC STJ<br />- AC TCU </p>
+<p>Minas Gerais<br />- AC CENIBRA<br />- AC FIAT<br />- AC Jaraguá</p>
+<p>Rio de Janeiro<br />
+- AC Academia Militar das Agulhas Negras<br />- AC Afonso Cavalcanti<br />- AC Fundação Osvaldo Cruz<br />- AC Ilha do Mocangue<br />- AC Marcílio Dias<br />- AC Petrobrás<br />- AC REDUC<br />- AC Ten. Fábio Magalhães</p>
+</div>
+<div class="ctrlcontent">  
+
+<p>Através de sua rede de agências, os Correios prestam serviços aos seus clientes, proporcionando o acesso ao atendimento postal e a outros serviços que trazem benefícios e conveniência.</p>
+<form name="formBuscaAgencia" id="formBuscaAgencia" action="/sistemas/agencias/Default.cfm" method="post" onsubmit="return _CF_checkformBuscaAgencia(this)">
+<input type="Hidden" name="coordenadaEndereco" id="coordenadaEndereco" value="" />
+<div class="form">
+<div class="contentform">
+<h4>Buscar agência por:</h4>
+<div class="div8col"> 
+<span class="f2col">
+<label>
+<input type="radio" value="P" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('P'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Proximidade </label>
+</span><span class="f2col">
+<label>
+<input type="radio" value="L" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('L'); jQuery('#formBuscaAgencia').validationEngine('hide');" checked="checked" />
+Localidade</label>
+</span> <span class="f2col">
+<label>
+<input type="radio" value="S" name="tipoBusca" id="tipoBusca" onclick="mostrarTipoBusca('S'); jQuery('#formBuscaAgencia').validationEngine('hide');" />
+Serviço</label>
+</span>
+</div>
+<!--SE PROXIMIDADE  -->
+<div id="divProximidade">
+<div class="separator-line"></div>
+<span>
+<label>Digite endereço de onde você está procurando <br />
+<input id="cepEndereco" name="cepEndereco" type="textbox" value="Guará, Brasília" style="width: 447px;" class="f8col text-input" />
+</label>
+</span> </div>
+<!-- SE LOCALIDADE -->
+<div class="separator"></div>
+<div id="divLocalidade">
+<p class="dica dicarotulo">O campos assinalados com (*) são obrigatórios</p>
+<span>
+<label>Estado *: <br /><select name="estadoAgencia" id="estadoAgencia" class="f3col validate[required]">
+<option value=""></option><option value="AC">ACRE</option><option value="AL">ALAGOAS</option><option value="AP">AMAPÁ</option><option value="AM">AMAZONAS</option><option value="BA">BAHIA</option><option value="CE">CEARÁ</option><option value="DF">DISTRITO FEDERAL</option><option value="ES">ESPÍRITO SANTO</option><option value="GO">GOIÁS</option><option value="MA">MARANHÃO</option><option value="MG">MINAS GERAIS</option><option value="MS">MATO GROSSO DO SUL</option><option value="MT">MATO GROSSO</option><option value="PA">PARÁ</option><option value="PB">PARAÍBA</option><option value="PE">PERNAMBUCO</option><option value="PI">PIAUÍ</option><option value="PR">PARANÁ</option><option value="RJ">RIO DE JANEIRO</option><option value="RN">RIO GRANDE DO NORTE</option><option value="RO">RONDÔNIA</option><option value="RR">RORAIMA</option><option value="RS">RIO GRANDE DO SUL</option><option value="SC">SANTA CATARINA</option><option value="SE">SERGIPE</option><option value="SP">SÃO PAULO</option><option value="TO">TOCANTINS</option></select></label>
+</span> 
+<span>
+<label>Município *: <br /><select name="municipioAgencia" id="municipioAgencia" class="f5col validate[required]">
+<option value=""></option><option value="ANGRA DOS REIS           ">ANGRA DOS REIS           </option><option value="APERIBE                  ">APERIBE                  </option><option value="ARARUAMA                 ">ARARUAMA                 </option><option value="AREAL                    ">AREAL                    </option><option value="ARMACAO DOS BUZIOS       ">ARMACAO DOS BUZIOS       </option><option value="ARRAIAL DO CABO          ">ARRAIAL DO CABO          </option><option value="BARRA DO PIRAI           ">BARRA DO PIRAI           </option><option value="BARRA MANSA              ">BARRA MANSA              </option><option value="BELFORD ROXO             ">BELFORD ROXO             </option><option value="BOM JARDIM               ">BOM JARDIM               </option><option value="BOM JESUS DO ITABAPOANA  ">BOM JESUS DO ITABAPOANA  </option><option value="CABO FRIO                ">CABO FRIO                </option><option value="CACHOEIRAS DE MACACU     ">CACHOEIRAS DE MACACU     </option><option value="CAMBUCI                  ">CAMBUCI                  </option><option value="CAMPOS DOS GOYTACAZES    ">CAMPOS DOS GOYTACAZES    </option><option value="CANTAGALO                ">CANTAGALO                </option><option value="CARAPEBUS                ">CARAPEBUS                </option><option value="CARDOSO MOREIRA          ">CARDOSO MOREIRA          </option><option value="CARMO                    ">CARMO                    </option><option value="CASIMIRO DE ABREU        ">CASIMIRO DE ABREU        </option><option value="COMENDADOR LEVY GASPARIAN">COMENDADOR LEVY GASPARIAN</option><option value="CONCEICAO DE MACABU      ">CONCEICAO DE MACABU      </option><option value="CORDEIRO                 ">CORDEIRO                 </option><option value="DUAS BARRAS              ">DUAS BARRAS              </option><option value="DUQUE DE CAXIAS          ">DUQUE DE CAXIAS          </option><option value="ENGENHEIRO PAULO DE FRONT">ENGENHEIRO PAULO DE FRONT</option><option value="GUAPIMIRIM               ">GUAPIMIRIM               </option><option value="IGUABA GRANDE            ">IGUABA GRANDE            </option><option value="ITABORAI                 ">ITABORAI                 </option><option value="ITAGUAI                  ">ITAGUAI                  </option><option value="ITALVA                   ">ITALVA                   </option><option value="ITAOCARA                 ">ITAOCARA                 </option><option value="ITAPERUNA                ">ITAPERUNA                </option><option value="ITATIAIA                 ">ITATIAIA                 </option><option value="JAPERI                   ">JAPERI                   </option><option value="LAJE DO MURIAE           ">LAJE DO MURIAE           </option><option value="MACAE                    ">MACAE                    </option><option value="MACUCO                   ">MACUCO                   </option><option value="MAGE                     ">MAGE                     </option><option value="MANGARATIBA              ">MANGARATIBA              </option><option value="MARICA                   ">MARICA                   </option><option value="MENDES                   ">MENDES                   </option><option value="MESQUITA                 ">MESQUITA                 </option><option value="MIGUEL PEREIRA           ">MIGUEL PEREIRA           </option><option value="MIRACEMA                 ">MIRACEMA                 </option><option value="NATIVIDADE               ">NATIVIDADE               </option><option value="NILOPOLIS                ">NILOPOLIS                </option><option value="NITEROI                  ">NITEROI                  </option><option value="NOVA FRIBURGO            ">NOVA FRIBURGO            </option><option value="NOVA IGUACU              ">NOVA IGUACU              </option><option value="PARACAMBI                ">PARACAMBI                </option><option value="PARAIBA DO SUL           ">PARAIBA DO SUL           </option><option value="PARATI                   ">PARATI                   </option><option value="PARATY                   ">PARATY                   </option><option value="PATY DO ALFERES          ">PATY DO ALFERES          </option><option value="PETROPOLIS               ">PETROPOLIS               </option><option value="PINHEIRAL                ">PINHEIRAL                </option><option value="PIRAI                    ">PIRAI                    </option><option value="PORCIUNCULA              ">PORCIUNCULA              </option><option value="PORTO REAL               ">PORTO REAL               </option><option value="QUATIS                   ">QUATIS                   </option><option value="QUEIMADOS                ">QUEIMADOS                </option><option value="QUISSAMA                 ">QUISSAMA                 </option><option value="RESENDE                  ">RESENDE                  </option><option value="RIO BONITO               ">RIO BONITO               </option><option value="RIO CLARO                ">RIO CLARO                </option><option value="RIO DAS FLORES           ">RIO DAS FLORES           </option><option value="RIO DAS OSTRAS           ">RIO DAS OSTRAS           </option><option value="RIO DE JANEIRO           ">RIO DE JANEIRO           </option><option value="SANTA MARIA MADALENA     ">SANTA MARIA MADALENA     </option><option value="SANTO ANTONIO DE PADUA   ">SANTO ANTONIO DE PADUA   </option><option value="SAO FIDELIS              ">SAO FIDELIS              </option><option value="SAO FRANCISCO DE ITABAPOA">SAO FRANCISCO DE ITABAPOA</option><option value="SAO GONCALO              ">SAO GONCALO              </option><option value="SAO JOAO DA BARRA        ">SAO JOAO DA BARRA        </option><option value="SAO JOAO DE MERITI       ">SAO JOAO DE MERITI       </option><option value="SAO JOSE DE UBA          ">SAO JOSE DE UBA          </option><option value="SAO JOSE DO VALE DO RIO P">SAO JOSE DO VALE DO RIO P</option><option value="SAO PEDRO DA ALDEIA      ">SAO PEDRO DA ALDEIA      </option><option value="SAO SEBASTIAO DO ALTO    ">SAO SEBASTIAO DO ALTO    </option><option value="SAPUCAIA                 ">SAPUCAIA                 </option><option value="SAQUAREMA                ">SAQUAREMA                </option><option value="SEROPEDICA               ">SEROPEDICA               </option><option value="SILVA JARDIM             ">SILVA JARDIM             </option><option value="SUMIDOURO                ">SUMIDOURO                </option><option value="TANGUA                   ">TANGUA                   </option><option value="TERESOPOLIS              ">TERESOPOLIS              </option><option value="TRAJANO DE MORAES        ">TRAJANO DE MORAES        </option><option value="TRES RIOS                ">TRES RIOS                </option><option value="VALENCA                  ">VALENCA                  </option><option value="VARRE-SAI                ">VARRE-SAI                </option><option value="VASSOURAS                ">VASSOURAS                </option><option value="VOLTA REDONDA            ">VOLTA REDONDA            </option></select></label>
+</span> 
+<span>
+<label>Bairro: <br /><select name="bairroAgencia" id="bairroAgencia" class="f6col">
+<option value=""></option><option value="CENTRO                                  ">CENTRO                                  </option></select></label>
+</span> 
+</div>
+<!-- SE SERVIÇO -->
+<div class="separator"></div>
+<div id="divServico">
+<div class="div8col"> 
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Atendimento</legend>
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="sabado" />Sábado</label>    
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="domingo" />Domingo</label>    
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="plantao" />Plantão</label>    
+<label><input name="ckbAtendimento" id="ckbAtendimento" type="checkbox" value="bancopostal" />Banco Postal </label>
+</fieldset>
+<fieldset style="border-style:dotted;border-width:1px;padding:0.2cm">
+<legend>Horário</legend>
+<select style="width: 60px;" id="selHorario" name="selHorario">
+<option>
+</option><option value="0000">00:00</option>
+<option value="0100">01:00</option>
+<option value="0200">02:00</option>
+<option value="0300">03:00</option>
+<option value="0400">04:00</option>
+<option value="0500">05:00</option>
+<option value="0600">06:00</option>
+<option value="0700">07:00</option>
+<option value="0800">08:00</option>
+<option value="0900">09:00</option>
+<option value="1000">10:00</option>
+<option value="1100">11:00</option>
+<option value="1200">12:00</option>
+<option value="1300">13:00</option>
+<option value="1400">14:00</option>
+<option value="1500">15:00</option>
+<option value="1600">16:00</option>
+<option value="1700">17:00</option>
+<option value="1800">18:00</option>
+<option value="1900">19:00</option>
+<option value="2000">20:00</option>
+<option value="2100">21:00</option>
+<option value="2200">22:00</option>
+<option value="2300">23:00</option>
+</select>
+</fieldset>  <br />
+<br />
+</div>
+</div>
+<div class="separator"></div>
+<div id="divBotaoBuscar" class="btnform">
+<input id="submit" type="button" value="Pesquisar" onclick="codeAddress()" class="btn2 float-right" />
+</div>
+</div>
+<!-- contentform -->
+</div>
+<!-- form -->
+</form>
+
+<div class="resultadoAgencia">
+<div id="divDetalheAgencia" style="width:100%;">
+  <span class="dica linhaUFMunBairro">RJ &gt; TRES RIOS                
+      &gt; CENTRO                                  </span>
+  
+
+  
+  
+ 
+		<table id="tableTituloAgencia" class="agencia">
+			<tbody><tr>
+				<th class="text-left">Agências encontradas</th>
+      <th class="text-right">Serviços disponíveis
+        
+			</th></tr>
+		</tbody></table>
+		
+		
+		
+		
+				<table id="tableNomeAgencia" class="agencia listEvent">
+					<tbody><tr>
+						
+						<td class="bullet ageNomeEvent nomeAgencia"><a href="javaScript:mostrarDetalheAgencia('2','1','-22.116923','-43.209825')">AC TRES RIOS                   - AGENCIA CORREIO               </a></td>
+						<td class="text-right">
+							
+								<img src="sistemas/agencias/img/banco_postal.png" alt="Serviço do banco postal disponível" title="Serviço do banco postal disponível" />
+							
+						</td>
+					</tr>
+				</tbody></table>
+				<table class="dadosAgencia" id="detalheAgencia1" style="display: none; height: auto;">
+					<tbody><tr><td class="tituloTabela">LOCALIZAÇÃO</td></tr>
+					<tr>
+						<td colspan="2"><span>Endereço:</span> PRACA SAO SEBASTIAO , 250</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Complemento:</span> </td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Bairro: </span> CENTRO</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Município: </span> TRES RIOS</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Cidade: </span> TRES RIOS</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>UF:</span> RJ</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>CEP: </span> 25804-971</td>
+					</tr>
+					
+					
+					<tr>
+						<td colspan="2"><span>Telefone: </span>
+							
+									(24) 2252-0884 
+						</td> 
+					</tr>
+					
+				
+					
+					
+					<tr>
+						<td colspan="2"><span>FAX:</span>
+							
+							
+								(24) 2252-0018 
+						</td>
+					</tr>
+					
+					
+					<tr><td> </td></tr>
+					<tr><td class="tituloTabela">HORÁRIO DE ATENDIMENTO</td></tr>
+					<tr>
+						<td width="50%"><span>Segunda a sexta: </span> Das 09:00 às 17:00</td>
+						<td><span>Horário de almoço: </span> -</td>
+					</tr>
+					<tr>
+						<td><span>Sábado: </span> -</td>
+						<td><span>Plantão no Sábado: </span> -</td>
+					</tr>
+					<tr>
+						<td><span>Domingo: </span> -</td>
+						<td><span>Plantão no Domingo: </span> -</td>
+					</tr>
+					<tr><td> </td></tr>
+					<tr>
+	                    <td colspan="2" align="center"><div id="mapa1" style="height: 300px; width: 470px; position: relative; overflow: hidden; display: none;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="z-index: 1; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: -7px; top: -125px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -7px; top: 131px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 249px; top: -125px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 249px; top: 131px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -7px; top: -125px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -7px; top: 131px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 249px; top: -125px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 249px; top: 131px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 470px; height: 300px;"><img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i3187207&amp;2i4722813&amp;2e1&amp;3u15&amp;4m2&amp;1u470&amp;2u300&amp;5m5&amp;1e0&amp;5spt-BR&amp;6sus&amp;10b1&amp;12b1&amp;token=111220" style="width: 470px; height: 300px;" /></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: -7px; top: -125px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12450!3i18448!4i256!2m3!1e0!2sm!3i408105998!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=89476" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 249px; top: 131px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12451!3i18449!4i256!2m3!1e0!2sm!3i408105998!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=85776" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 249px; top: -125px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12451!3i18448!4i256!2m3!1e0!2sm!3i408105998!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=49755" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: -7px; top: 131px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12450!3i18449!4i256!2m3!1e0!2sm!3i408105998!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=125497" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div></div><div style="z-index: 4; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=-22.116923,-43.209825&amp;z=15&amp;t=m&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;" /></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 85px; top: 60px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div><div style="font-size: 13px;">Dados cartográficos ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 178px; bottom: 0px; width: 169px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span style="">Dados cartográficos ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Dados cartográficos ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 112px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div></div><div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;" /></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-22.116923,-43.209825,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Aumentar o zoom" aria-label="Aumentar o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;" /></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Diminuir o zoom" aria-label="Diminuir o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;" /></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar mapa de ruas" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px; font-weight: 500;">Mapa</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;" /></div></span><label style="vertical-align: middle; cursor: pointer;">Relevo</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar imagens de satélite" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-left: 0px; min-width: 37px;">Satélite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;" /></div></span><label style="vertical-align: middle; cursor: pointer;">Marcadores</label></div></div></div></div></div></div></div></td>
+	                </tr>
+					<tr><td> </td></tr>
+				</tbody></table>		
+			
+				<table id="tableNomeAgencia" class="agencia listEvent">
+					<tbody><tr>
+						
+						<td class="bullet ageNomeEvent nomeAgencia"><a href="javaScript:mostrarDetalheAgencia('2','2','-22.141290','-43.096344')">AGC BEMPOSTA                   - AGENCIA CORREIO COMUNITARIA   </a></td>
+						<td class="text-right">
+							
+						</td>
+					</tr>
+				</tbody></table>
+				<table class="dadosAgencia" id="detalheAgencia2" style="display: table; height: auto;">
+					<tbody><tr><td class="tituloTabela">LOCALIZAÇÃO</td></tr>
+					<tr>
+						<td colspan="2"><span>Endereço:</span> RUA WERNECK , 425</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Complemento:</span> </td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Bairro: </span> CENTRO</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Município: </span> TRES RIOS</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>Cidade: </span> BEMPOSTA</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>UF:</span> RJ</td>
+					</tr>
+					<tr>
+						<td colspan="2"><span>CEP: </span> 25840-970</td>
+					</tr>
+					
+					
+					
+					<tr><td> </td></tr>
+					<tr><td class="tituloTabela">HORÁRIO DE ATENDIMENTO</td></tr>
+					<tr>
+						<td width="50%"><span>Segunda a sexta: </span> Das 08:00 às 16:00</td>
+						<td><span>Horário de almoço: </span> -</td>
+					</tr>
+					<tr>
+						<td><span>Sábado: </span> -</td>
+						<td><span>Plantão no Sábado: </span> -</td>
+					</tr>
+					<tr>
+						<td><span>Domingo: </span> -</td>
+						<td><span>Plantão no Domingo: </span> -</td>
+					</tr>
+					<tr><td> </td></tr>
+					<tr>
+	                    <td colspan="2" align="center"><div id="mapa2" style="height: 300px; width: 470px; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="z-index: 1; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; position: absolute; left: 165px; top: 30px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -91px; top: 30px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 165px; top: -226px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 165px; top: 286px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 421px; top: 30px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -91px; top: -226px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -91px; top: 286px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 421px; top: -226px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 421px; top: 286px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 165px; top: 30px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -91px; top: 30px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 165px; top: -226px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 165px; top: 286px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 421px; top: 30px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -91px; top: -226px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -91px; top: 286px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 421px; top: -226px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 421px; top: 286px;"></div></div></div></div><div style="position: absolute; z-index: 0; left: 0px; top: 0px;"><div style="overflow: hidden; width: 470px; height: 300px;"><img src="https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&amp;1i3189851&amp;2i4723426&amp;2e1&amp;3u15&amp;4m2&amp;1u470&amp;2u300&amp;5m5&amp;1e0&amp;5spt-BR&amp;6sus&amp;10b1&amp;12b1&amp;token=42393" style="width: 470px; height: 300px;" /></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="position: absolute; left: -91px; top: -226px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12460!3i18450!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=80542" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 165px; top: 286px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12461!3i18452!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=112863" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 165px; top: 30px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12461!3i18451!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=76842" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: -91px; top: 30px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12460!3i18451!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=116563" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 421px; top: 286px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12462!3i18452!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=73142" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 421px; top: -226px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12462!3i18450!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=1100" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: -91px; top: 286px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12460!3i18452!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=21513" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 165px; top: -226px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12461!3i18450!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=40821" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div style="position: absolute; left: 421px; top: 30px; transition: opacity 200ms ease-out;"><img src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i15!2i12462!3i18451!4i256!2m3!1e0!2sm!3i408106129!3m9!2spt-BR!3sUS!5e18!12m1!1e68!12m3!1e37!2m1!1ssmartmaps!4e0&amp;token=37121" draggable="false" alt="" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"><div style="z-index: 1; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;"></div></div><div style="z-index: 4; position: absolute; top: 0px; left: 0px; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=-22.14129,-43.096344&amp;z=15&amp;t=m&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;" /></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 85px; top: 60px;"><div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div><div style="font-size: 13px;">Dados cartográficos ©2018 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 178px; bottom: 0px; width: 169px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Dados do mapa</a><span style="">Dados cartográficos ©2018 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Dados cartográficos ©2018 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 112px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/pt-BR_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Termos de Uso</a></div></div><div style="cursor: pointer; width: 25px; height: 25px; overflow: hidden; display: none; margin: 10px 14px; position: absolute; top: 0px; right: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/sv9.png" draggable="false" class="gm-fullscreen-control" style="position: absolute; left: -52px; top: -86px; width: 164px; height: 175px; user-select: none; border: 0px; padding: 0px; margin: 0px;" /></div><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Informar erros no mapa ou nas imagens para o Google" href="https://www.google.com/maps/@-22.14129,-43.096344,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Informar erro no mapa</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;"><div title="Aumentar o zoom" aria-label="Aumentar o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;" /></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div><div title="Diminuir o zoom" aria-label="Diminuir o zoom" tabindex="0" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;" /></div></div></div></div><div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/images/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;" /></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar mapa de ruas" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; min-width: 28px; font-weight: 500;">Mapa</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; left: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar mapa de ruas com relevo" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;" /></div></span><label style="vertical-align: middle; cursor: pointer;">Relevo</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Mostrar imagens de satélite" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-left: 0px; min-width: 37px;">Satélite</div><div style="background-color: white; z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; position: absolute; right: 0px; top: 29px; text-align: left; display: none;"><div draggable="false" title="Mostrar imagens com nomes de rua" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; user-select: none; font-size: 11px; background-color: rgb(255, 255, 255); padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap;"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; background-color: rgb(255, 255, 255); border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle;"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="https://maps.gstatic.com/mapfiles/mv/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 68px; height: 67px;" /></div></span><label style="vertical-align: middle; cursor: pointer;">Marcadores</label></div></div></div></div></div></div></div></td>
+	                </tr>
+					<tr><td> </td></tr>
+				</tbody></table>		
+			
+		
+	<div class="legendas">
+		
+		<h5>Legenda</h5>
+	
+		<ul class="servicosAgencias">
+			<li><img alt="Serviço do banco postal disponível" title="Serviço do banco postal disponível" src="sistemas/agencias/img/banco_postal.png" /> Banco Postal </li>
+		</ul>
+
+	</div>
+		
+</div>
+</div>
+<div id="imgPesquisaMap" style="display:none;text-align: center;">
+<img src="home2014/img/loading2.gif" />
+</div>
+<div class="resultadoAgencia" id="map" style="height: 300px; width: 470px;">
+</div>
+<script src="sistemas/agencias/js/jsAgencia.js?versao=1.2" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine.js" type="text/javascript"></script>
+<script src="sistemas/agencias/js/jquery.validationEngine-pt.js" type="text/javascript"></script>	
+<script src="sistemas/agencias/js/jsMaps.js?versao=1.14" type="text/javascript"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASBQIKouehHj8AMNWp4MZgJrYju876Qcc&amp;signed_in=true&amp;callback=initMap&amp;v=3.21" async="" defer=""></script>
+
+</div>
+</div>
+</div>
+<br class="clr" />
+</div>
+</div>
+</div>
+</div><!-- class="wrap" -->
+<!-- laminas -->
+<div class="footer">
+  <div class="wrap">
+    
+      <div class="column-footer">
+        <h3><a href="sistemas/falecomoscorreios">Fale com os Correios</a></h3>
+        <ul>
+          <li class="node"><a href="sistemas/falecomoscorreios">Manifestação via Internet</a>
+            <ul>
+              <li><a href="sistemas/falecomoscorreios">Fale Conosco pelo site</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/falecomoscorreios">Atendimento telefônico</a>
+            <ul>
+              <li>3003 0100 (Capitais e Região Metropolitanas)</li>
+              <li>0800 725 7282 (Demais localidades)</li>
+              <li>0800 725 0100 (Sugestões ou reclamações)</li>
+              <li>0800 725 0898 (exclusivo para portadores <br />
+                de deficiência auditiva) </li>
+              <li>3003 1383 (Informações Banco Postal)</li>
+            </ul>
+          </li>
+          <li class="node"> <a href="sistemas/agencias/">Rede de atendimento</a>
+            <ul>
+              <li><a href="sistemas/agencias">Consulte endereços e horários de atendimentos <br />
+                das agências dos Correios</a></li>
+            </ul>
+          </li>
+          <li class="node"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/ouvidoria">Ouvidoria</a> </li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Portal Correios</a></h3>
+        <ul>
+          <li><a href="http://www.correios.com.br/sitemap">Mapa do site</a></li>
+          <li><a href="sistemas/rastreamento/default.cfm">Rastreamento de objetos</a></li>
+          <li><a href="http://www.correios.com.br/correios/sobre-correios/sala-de-imprensa/fale-com-a-assessoria-de-comunicacao">Sala de Imprensa</a></li>
+          <li><a href="institucional/concursos/correios/default.cfm">Concursos</a></li>
+          <li><a href="http://www.correios.com.br/correios/sobre-correios/patrocinio/patrocinio">Patrocínios</a></li>
+          <li><a href="http://www.correios.com.br/para-voce/correios-de-a-a-z/contatos-comerciais">Contatos comerciais</a></li>
+          <li><a href="http://www.correios.com.br/correios/sobre-correios/a-empresa/carta-de-servicos-ao-cidadao">Carta de serviços ao cidadão</a></li>
+          <li><a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/denuncias/denuncias/">Denúncia</a></li>
+          <li><a href="http://www.mc.gov.br/">Ministério das Comunicações</a></li>
+        </ul>
+      </div>
+      <div class="column-footer">
+        <h3><a href="">Outros sites dos Correios</a></h3>
+        <ul>
+          <li><a href="http://www.correios.com.br/para-voce">Correios para você</a></li>
+          <li><a href="http://www.correios.com.br/para-sua-empresa">Correios para sua empresa</a></li>
+          <li><a href="http://www.correios.com.br/sobre-correios">Sobre Correios</a></li>
+          <li><a href="http://shopping.correios.com.br/correiosonline">Loja virtual dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/correios">Blog dos Correios</a></li>
+          <li><a href="http://blog.correios.com.br/filatelia">Espaço da Filatelia</a></li>
+          <li><a href="http://m.correios.com.br/">Correios Mobile</a></li>
+          <li><a href="http://www2.correios.com.br/">Sistemas dos Correios</a></li>
+        </ul>
+      </div>
+      <div class="copy"> <a href="http://www.correios.com.br/sobre-correios/fale-com-os-correios/politica-de-privacidade-e-notas-legais/">Política de Privacidade e notas legais</a> -  © Copyright  2014 Correios - Todos os direitos reservados. </div>
+      
+  </div>
+  
+</div>
+ 
+</div>
+<!-- class="back" -->
+
+<script type="text/javascript">
+
+ddaccordion.init({
+	headerclass: "expo", //Shared CSS class name of headers group
+	contentclass: "dados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "normal", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+
+	}
+})
+
+ddaccordion.init({
+	headerclass: "abarotulo", //Shared CSS class name of headers group
+	contentclass: "submenu", //Shared CSS class name of contents group
+	revealtype: "mouseover", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 100, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: true, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+			
+	}
+})
+
+
+/*Agencias*/
+ddaccordion.init({
+	headerclass: "expodados", //Shared CSS class name of headers group
+	contentclass: "contentexpodados", //Shared CSS class name of contents group
+	revealtype: "click", //Reveal content when user clicks or onmouseover the header? Valid value: "click", "clickgo", or "mouseover"
+	mouseoverdelay: 0, //if revealtype="mouseover", set delay in milliseconds before header expands onMouseover
+	collapseprev: false, //Collapse previous content (so only one open at any time)? true/false
+	defaultexpanded: [], //index of content(s) open by default [index1, index2, etc] [] denotes no content
+	onemustopen: false, //Specify whether at least one header should be open always (so never all headers closed)
+	animatedefault: false, //Should contents open by default be animated into view?
+	persiststate: false, //persist state of opened contents within browser session?
+	toggleclass: ["", "selected"], //Two CSS classes to be applied to the header when it's collapsed and expanded, respectively ["class1", "class2"]
+	togglehtml: ["", "", ""], //Additional HTML added to the header when it's collapsed and expanded, respectively  ["position", "html1", "html2"] (see docs)
+	animatespeed: "fast", //speed of animation: integer in milliseconds (ie: 200), or keywords "fast", "normal", or "slow"
+	oninit:function(headers, expandedindices){ //custom code to run when headers have initalized
+		//do nothing
+	},
+	onopenclose:function(header, index, state, isuseractivated){ //custom code to run whenever a header is opened or closed
+		//do nothing
+	}
+})
+
+function iconeAbaMouseOut(){
+	$('ul.iconeaba').mouseleave(function() {
+		ddaccordion.collapseall('abarotulo');
+	});	
+}
+function produtosAZMouseOut(){
+	$('div.produtosaz').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+function produtosAZtrocaMostraTudo(){
+	$('#abreTudo').css('display','block');
+	$('#abreFecha a').click(function() {
+		$("#abreFecha a").toggle();
+	});	
+}
+
+function cbDivMouseOut(){
+	$('div.cbDiv').mouseleave(function() {
+		ddaccordion.collapseall('expo');
+	});	
+}
+
+$(document).ready(function(){
+	iconeAbaMouseOut();
+	produtosAZMouseOut();
+	produtosAZtrocaMostraTudo();
+	cbDivMouseOut();
+	
+});
+
+
+</script><style type="text/css">
+.dados{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.submenu{display: none}
+a.hiddenajaxlink{display: none}
+</style><style type="text/css">
+.contentexpodados{display: none}
+a.hiddenajaxlink{display: none}
+</style> <script type="text/javascript">
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#nav a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent", // the class of the content you are hiding until the tab is clicked
+			//showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent2", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+ 
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#seletorforms2 select option", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent3", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: null, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: 'slide', // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+		$(document).ready(function(){
+ 
+		$.jtabber({
+			mainLinkTag: "#wizard a", // much like a css selector, you must have a 'title' attribute that links to the div id name
+			activeLinkClass: "selected", // class that is applied to the tab once it's clicked
+			hiddenContentClass: "hiddencontent4", // the class of the content you are hiding until the tab is clicked
+			showDefaultTab: 1, // 1 will open the first tab, 2 will open the second etc.  null will open nothing by default
+			showErrors: false, // true/false - if you want errors to be alerted to you
+			effect: null, // null, 'slide' or 'fade' - do you want your content to fade in or slide in?
+			effectSpeed: 'fast' // 'slow', 'medium' or 'fast' - the speed of the effect
+		})
+ 
+		})
+		
+</script> 		<script>
+			$(document).ready(function(){
+				//Examples of how to assign the ColorBox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:425, innerHeight:344});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"50%"});
+				$(".inline2").colorbox({inline:true, width:"340px"});
+				$(".inline3").colorbox({inline:true, width:"70%"});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-564464-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-564464-1');
+</script>
+
+
+
+ 
+
+<!-- contentobjects: page generated at 2017-09-22 11:15 AM -->
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" style="display: none; padding-bottom: 20px; padding-right: 0px;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxLoadedContent" style="width: 0px; height: 0px; overflow: hidden; float: left;"></div><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><div id="cboxNext" style="float: left;"></div><div id="cboxPrevious" style="float: left;"></div><div id="cboxSlideshow" style="float: left;"></div><div id="cboxClose" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>
