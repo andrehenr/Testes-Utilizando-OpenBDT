@@ -30,6 +30,65 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	@FindBy(xpath = "//*[@id='wrap-page-head']/div[1]/h1/span")
 	private WebElement nomeHotel;
 	
+	@FindBy(xpath = "//*[@id='search']/div[1]/div[4]/div/div/div/input")
+	private WebElement campoDestinoVoo;
+	
+	@FindBy(xpath = "//*[@id='search-date-depart']/div[1]/button")
+	private WebElement campoDataIda;
+	
+	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[1]/div/button/div/span")
+	private WebElement mesSelecionadoIda;
+	
+	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[3]")
+	private WebElement botaoProximoMes;
+	
+	@FindBy(xpath = "//*[@id='date-depart_table']/tbody/tr/td/div")
+	private List<WebElement> diasDoCalendarioEmExibicao;
+	
+	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[1]/div/div/ul/li/a")
+	private List<WebElement> quantidadePassagemDozeMais;
+	
+	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[2]/div/div/ul/li/a")
+	private WebElement quantidadePassagensDozeMenos;
+	
+	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[4]/div/div/ul/li/a")
+	private WebElement quantidadePassagemBebes;
+	
+	@FindBy(xpath = "//*[@id='search']/a")
+	private WebElement botaoPesquisarVoos;
+	
+	public WebElement getCampoDestinoVoo() {
+		return campoDestinoVoo;
+	}
+
+	public WebElement getCampoDataIda() {
+		return campoDataIda;
+	}
+
+	public WebElement getMesSelecionadoIda() {
+		return mesSelecionadoIda;
+	}
+
+	public WebElement getBotaoProximoMes() {
+		return botaoProximoMes;
+	}
+
+	public List<WebElement> getDiasDoCalendarioEmExibicao() {
+		return diasDoCalendarioEmExibicao;
+	}
+
+	public List<WebElement> getQuantidadePassagemDozeMais() {
+		return quantidadePassagemDozeMais;
+	}
+
+	public WebElement getQuantidadePassagensDozeMenos() {
+		return quantidadePassagensDozeMenos;
+	}
+
+	public WebElement getQuantidadePassagemBebes() {
+		return quantidadePassagemBebes;
+	}
+
 	public WebElement getNomeHotel() {
 		return nomeHotel;
 	}
