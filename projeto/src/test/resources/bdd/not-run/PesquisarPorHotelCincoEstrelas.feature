@@ -1,4 +1,4 @@
-Feature: Pesquisar selecionar um hotel cinco estrelas no Rio de Janeiro
+Feature: Pesquisar e selecionar um hotel cinco estrelas no Rio de Janeiro
 
 @usrum
 Scenario Outline: Pesquisa no Hotel Urbano por um hotel cinco estrelas

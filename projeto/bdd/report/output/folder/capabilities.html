@@ -35,11 +35,11 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 9],
+                ['Passing', 10],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
-                ['Errors',  0],
+                ['Errors',  1],
                 ['Compromised',  0],
                 ['Untested',  0],
             ]
@@ -68,11 +68,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '9 requirements tested successfully'},
+                {label: '10 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
                 {label: '0} requirements with failures'},
-                {label: '0} requirements with errors'},
+                {label: '1} requirements with errors'},
                 {label: '0} requirements compromised'},
                 {label: '0} requirements untested'},
             ]
@@ -192,9 +192,9 @@
 
                                 <tr>
                                     <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
-                                    <td>9</td>
-                                    <td>9</td>
-                                    <td>0</td>
+                                    <td>11</td>
+                                    <td>10</td>
+                                    <td>1</td>
                                     <td>0</td>
                                     <td>0</td>
                                     <td></td>
@@ -223,9 +223,9 @@
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>9</td>
-            <td>9 (100%)</td>
-            <td>0 (0%)</td>
+            <td>11</td>
+            <td>10 (91%)</td>
+            <td>1 (9%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
@@ -239,15 +239,15 @@
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>9</td>
-            <td>9 (100%)</td>
-            <td>0 (0%)</td>
+            <td>11</td>
+            <td>10 (91%)</td>
+            <td>1 (9%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">4 minutes 3 seconds</td>
+                <td colspan="5">5 minutes 58 seconds</td>
         </tr>
         </body>
     </table>
@@ -359,6 +359,27 @@
                                 <td class="lightgreentext">28.9</td>
                             </tr>
 
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="5f83dc7d2d02444221e0b38f8202908721c06edd7bec96a807071b05ee15fab5.html" class="ellipsis"
+                                           title="Pesquisa no Hotel Urbano por um hotel cinco estrelas Web driver exception: unknown error: ...">
+                                            Pesquisa no Hotel Urbano por um hotel cinco estrelas&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">10</td>
+
+
+                                <td class="lightgreentext">60.44</td>
+                            </tr>
+
                             <tr class="test-SUCCESS">
                                 <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
@@ -366,7 +387,7 @@
                                 <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
-                                        <a href="5f83dc7d2d02444221e0b38f8202908721c06edd7bec96a807071b05ee15fab5.html" class="ellipsis"
+                                        <a href="16a6485ed6d842410a74830ee4440667b314124b922b8a3c57a99645b4f83f4e.html" class="ellipsis"
                                            title="Pesquisa no Hotel Urbano por um hotel cinco estrelas ">
                                             Pesquisa no Hotel Urbano por um hotel cinco estrelas&nbsp;(1  examples)
                                                 <span class="related-issue-title"></span>
@@ -377,7 +398,28 @@
                                 <td class="lightgreentext">9</td>
 
 
-                                <td class="lightgreentext">65.25</td>
+                                <td class="lightgreentext">71.12</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="fde8e6848079907a0c60416a635413e4deed4636ad1029f08e1a7217396cd8fb.html" class="ellipsis"
+                                           title="Pesquisar voos de S&atilde;o Paulo para Salvador ">
+                                            Pesquisar voos de S&atilde;o Paulo para Salvador&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">10</td>
+
+
+                                <td class="lightgreentext">48.33</td>
                             </tr>
 
                             <tr class="test-SUCCESS">

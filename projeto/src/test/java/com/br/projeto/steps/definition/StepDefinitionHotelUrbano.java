@@ -58,6 +58,43 @@ public class StepDefinitionHotelUrbano {
 	    stepB.exibirInformacoesHotel();
 	}
 
+	@When("^clico na opcao de Aereos$")
+	public void clico_na_opcao_de_Aereos() {
+	    stepB.clicarEmAereos();
+	}
 	
+	@When("^preencho o campo de destino do voo \"([^\"]*)\"$")
+	public void preencho_o_campo_de_destino_do_voo(String destino) {
+	    stepB.preencherCampoDestinoVoo(destino);
+	}
+
+	@When("^seleciono a data de ida \"([^\"]*)\"$")
+	public void seleciono_a_data_de_ida(String dataIda){
+		stepB.selecionaDataIdaVoo(dataIda);
+	}
 	
+	@When("^seleciono a quantidade de adultos \"([^\"]*)\"$")
+	public void seleciono_a_quantidade_de_adultos(int quantidadeAdultos) {
+	    stepB.selecionarQuantidadeAdultos(quantidadeAdultos);
+	}
+
+	@When("^seleciono a quantidade de criancas \"([^\"]*)\"$")
+	public void seleciono_a_quantidade_de_criancas(int quantidadeCriancas){
+	    stepB.selecionarQuantidadeCriancas(quantidadeCriancas);
+	}
+
+	@When("^seleciono a quantidade de bebes \"([^\"]*)\"$")
+	public void seleciono_a_quantidade_de_bebes(int quantidadeBebes) {
+	    stepB.selecionarQuantidadeBebes(quantidadeBebes);
+	}
+
+	@When("^clico no botao para pesquisar$")
+	public void clico_no_botao_para_pesquisar() throws Throwable {
+	    stepB.clicarNoBotaoPesquisarVoo();
+	}
+	
+	@Then("^exibo quantidade de resultados encontrados$")
+	public void exibo_quantidade_resultados_encontrados() {
+		stepB.exibirInformacoesVoo();
+	}
 }

@@ -22,7 +22,7 @@ public class StepBusinessHotelUrbano {
 
 	PageObjectClassHotelUrbano page;
 	private static Logger LOG = Logger.getLogger(StepBusinessHotelUrbano.class);
-	
+
 	@Autowired
 	private WebBrowserScreenElement viewElement; // OBJETO QUE CONT�M M�TODOS PR�PRIOS DO FRAMEWORK
 
@@ -51,16 +51,18 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaPrimeiroHotel() {
+		viewElement.waitForElementIsPresent(10, page.getResultadoDosHoteis().get(1));
 		List<WebElement> listaElementos = page.getResultadoDosHoteis();
-		listaElementos.get(2).click();
+		listaElementos.get(1).click();
 		mudaDePagina(null);
 	}
-	
+
 	public void mudaDePagina(WebElement elementoEsperado) {
 		for (String windows : viewElement.getDriver().getWindowHandles()) {
 			viewElement.getDriver().switchTo().window(windows);
 		}
-		if(elementoEsperado != null) viewElement.waitForElementIsPresent(30, elementoEsperado);
+		if (elementoEsperado != null)
+			viewElement.waitForElementIsPresent(30, elementoEsperado);
 	}
 
 	public boolean verificarStatusCincoEstrelasDoHotel() {
@@ -68,7 +70,66 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void exibirInformacoesHotel() {
-		LOG.info("Hotel Cinco Estrelas: "+page.getNomeHotel().getText());
+		LOG.info("Hotel Cinco Estrelas: " + page.getNomeHotel().getText());
+	}
+
+	public void clicarEmAereos() {
+		viewElement.click(page.getLinkAereos());
+	}
+
+	public void preencherCampoDestinoVoo(String destino) {
+		viewElement.waitAndClick(page.getLinkCampoDestino(), 10);
+		viewElement.sendText(page.getCampoDestinoVoo(), destino);
+	}
+
+	public void selecionaDataIdaVoo(String dataIda) {
+		String[] data = dataIda.split(" ");
+		viewElement.click(page.getCampoDataIda());
+		while (!page.getMesSelecionadoIda().getText().contains(data[1])) {
+			viewElement.click(page.getBotaoProximoMes());
+		}
+		boolean comecouMes = false;
+		int d = 0;
+		while(!comecouMes) {
+			if(page.getDiasDoCalendarioEmExibicao().get(d).getText().equals("1")) {
+				comecouMes = true;
+			}
+			else {
+				d++;
+			}
+		}
+		while (!page.getDiasDoCalendarioEmExibicao().get(d).getText()
+				.equals(Integer.valueOf(data[0]).toString())) {
+				d++;
+		}
+		viewElement.click(page.getDiasDoCalendarioEmExibicao().get(d));
+	}
+
+	public void selecionarQuantidadeAdultos(int quantidadeAdultos) {
+		viewElement.click(page.getCamposPassagem().get(0));
+		viewElement.click(page.getQuantidadePassagensDozeMais().get(quantidadeAdultos-1));
+	}
+
+	public void selecionarQuantidadeCriancas(int quantidadeCriancas) {
+		viewElement.click(page.getCamposPassagem().get(1));
+		viewElement.click(page.getQuantidadePassagensDozeMenos().get(quantidadeCriancas));
+	}
+
+	public void selecionarQuantidadeBebes(int quantidadeBebes) {
+		viewElement.click(page.getCamposPassagem().get(2));
+		viewElement.click(page.getQuantidadePassagensBebes().get(quantidadeBebes));
+	}
+
+	public void clicarNoBotaoPesquisarVoo() {
+		viewElement.click(page.getBotaoPesquisarVoos());
+		
+	}
+
+	public void exibirInformacoesVoo() {
+		viewElement.waitForElementIsPresent(30, page.getTotalResultadosVoo());
+		viewElement.scrollIntoView(page.getTotalResultadosVoo());
+		String resultado = page.getTotalResultadosVoo().getText();
+		LOG.info(resultado.substring(resultado.indexOf("e ")+1));
 	}
 
 }

@@ -30,6 +30,9 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	@FindBy(xpath = "//*[@id='wrap-page-head']/div[1]/h1/span")
 	private WebElement nomeHotel;
 	
+	@FindBy(xpath = "//*[@id='reactRoot']/div/div[1]/div/div[1]/div[1]/header/div/div[2]/nav/a[6]")
+	private WebElement linkAereos;
+	
 	@FindBy(xpath = "//*[@id='search']/div[1]/div[4]/div/div/div/input")
 	private WebElement campoDestinoVoo;
 	
@@ -46,17 +49,46 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	private List<WebElement> diasDoCalendarioEmExibicao;
 	
 	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[1]/div/div/ul/li/a")
-	private List<WebElement> quantidadePassagemDozeMais;
+	private List<WebElement> quantidadePassagensDozeMais;
 	
 	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[2]/div/div/ul/li/a")
-	private WebElement quantidadePassagensDozeMenos;
+	private List<WebElement> quantidadePassagensDozeMenos;
 	
 	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[4]/div/div/ul/li/a")
-	private WebElement quantidadePassagemBebes;
+	private List<WebElement> quantidadePassagensBebes;
 	
 	@FindBy(xpath = "//*[@id='search']/a")
 	private WebElement botaoPesquisarVoos;
 	
+	@FindBy(xpath = "//*[@id='search']/div[1]/div[4]/div/div/a")
+	private WebElement linkCampoDestino;
+	
+	@FindBy(xpath = "//*[@id=\"people-and-class\"]/div[2]/div/div")
+	private List<WebElement> camposPassagem;
+	
+	@FindBy(css = ".results-count")
+	private WebElement totalResultadosVoo;
+	
+	public WebElement getTotalResultadosVoo() {
+		return totalResultadosVoo;
+	}
+
+	public List<WebElement> getCamposPassagem() {
+		return camposPassagem;
+	}
+
+	public WebElement getLinkCampoDestino() {
+		return linkCampoDestino;
+	}
+
+	public WebElement getLinkAereos() {
+		return linkAereos;
+	}
+
+	public WebElement getBotaoPesquisarVoos() {
+		return botaoPesquisarVoos;
+	}
+
 	public WebElement getCampoDestinoVoo() {
 		return campoDestinoVoo;
 	}
@@ -77,16 +109,16 @@ public class PageObjectClassHotelUrbano extends PageObject {
 		return diasDoCalendarioEmExibicao;
 	}
 
-	public List<WebElement> getQuantidadePassagemDozeMais() {
-		return quantidadePassagemDozeMais;
+	public List<WebElement> getQuantidadePassagensDozeMais() {
+		return quantidadePassagensDozeMais;
 	}
 
-	public WebElement getQuantidadePassagensDozeMenos() {
+	public List<WebElement> getQuantidadePassagensDozeMenos() {
 		return quantidadePassagensDozeMenos;
 	}
 
-	public WebElement getQuantidadePassagemBebes() {
-		return quantidadePassagemBebes;
+	public List<WebElement> getQuantidadePassagensBebes() {
+		return quantidadePassagensBebes;
 	}
 
 	public WebElement getNomeHotel() {
