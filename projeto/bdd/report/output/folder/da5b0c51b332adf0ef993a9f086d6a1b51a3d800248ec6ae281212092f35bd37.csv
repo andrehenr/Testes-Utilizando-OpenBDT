@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Buscar Endereco nos Correios passando CEP","Comeco o teste","FAILURE","2018-01-19T11:03:46.224-02:00","0.0","13.61"
+"Reservar uma diaria um hotel cinco estrelas em São Paulo","Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer uma diaria","FAILURE","2018-01-26T12:14:20.697-02:00","0.0","135.42"
