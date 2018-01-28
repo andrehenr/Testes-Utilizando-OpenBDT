@@ -105,4 +105,40 @@ public class StepBusinessSouBarato {
 		}
 	}
 
+	public void pesquisarPor(String iphone) {
+		viewElement.sendText(page.getCampoBusca(), iphone + Keys.ENTER.toString());
+	}
+
+	public void selecionarPrimeiroProdutoDaBusca() {
+		viewElement.click(page.getListaProdutosPosPesquisa().get(0));
+	}
+
+	public void passarMouseSobreVantagens() {
+		viewElement.mouseOver(page.getAbaVantagens());
+	}
+	
+	public void clicarEmConhecaVantagens(){
+		viewElement.mouseOver(page.getLinkConhecaVantagens());
+		viewElement.click(page.getLinkConhecaVantagens());
+	}
+	
+	public boolean verificaAbaVantagensAberta(){
+		return viewElement.isEnabled(page.getAbaVantagensAberta());
+	}
+
+	public void clicarLinkLimite() {
+		viewElement.click(page.getLinkLimite());
+	}
+
+	public void clicarEmLinkProdutosUsados() {
+		viewElement.click(page.getLinkPordutosUsados());
+	}
+
+	public void exibirFretes() {
+		LOG.info("Fretes disponíveis");
+		for(WebElement elemento : page.getOpcoesFrete()){
+			LOG.info(elemento.getText());
+		}
+	}
+
 }

@@ -1,6 +1,7 @@
 package com.br.projeto.steps.definition;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.br.projeto.steps.business.StepBusinessSouBarato;
@@ -84,5 +85,45 @@ public class StepDefinitionSouBarato {
 	@Given("^seleciono geladeira por marca \"([^\"]*)\"$")
 	public void selecionoGeladeiraMarca(String marca){
 	    stepB.selecionarGeladeiraMarca(marca);
+	}
+	
+	@When("^pesquiso por \"([^\"]*)\"$")
+	public void pesquisoPor(String iphone) {
+	    stepB.pesquisarPor(iphone);
+	}
+
+	@When("^seleciono a primeira ocorrencia$")
+	public void selecionoPrimeiraOcorrencia() {
+	    stepB.selecionarPrimeiroProdutoDaBusca();
+	}
+	
+	@When("^clico no link de Limite$")
+	public void clicoLinkLimite() {
+		stepB.clicarLinkLimite();
+	}
+
+	@When("^passo o mouse sobre Vantagens$")
+	public void passoMouseSobreVantagens(){
+		stepB.passarMouseSobreVantagens();
+	}
+
+	@When("^clico em Conheca Vantagens$")
+	public void clicoEmConhecaVantagens() {
+		stepB.clicarEmConhecaVantagens();
+	}
+
+	@Then("^valido aba aberta$")
+	public void validoAbaAberta(){
+		Assert.assertTrue(stepB.verificaAbaVantagensAberta());
+	}
+	
+	@When("^clico no link de Produtos Usados$")
+	public void clicoLinkProdutosUsados(){
+	    stepB.clicarEmLinkProdutosUsados();
+	}
+
+	@Then("^exibo frete$")
+	public void exiboFrete(){
+		stepB.exibirFretes();
 	}
 }
