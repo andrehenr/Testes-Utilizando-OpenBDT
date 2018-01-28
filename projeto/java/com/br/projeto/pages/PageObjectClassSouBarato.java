@@ -3,12 +3,13 @@ package com.br.projeto.pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassSouBarato extends PageObject{
-
+	
 	@FindBy(xpath = "//*[@id='containerpage']/div[2]/div/div/div/section/ul/li/section/div[2]/a")
 	private List<WebElement> listaDePordutosReembalados;
 	
@@ -35,6 +36,49 @@ public class PageObjectClassSouBarato extends PageObject{
 	
 	@FindBy(id = "calculate-freight-button")
 	private WebElement botaoCalculaFrete;
+	
+	@FindBy(css = ".warranty-button")
+	private WebElement botaoContinuarPaginaGarantia;
+	
+	@FindBy(id = "buy-button")
+	private WebElement botaoComprarPaginaFrete;
+	
+	@FindBy(xpath = "//*[@id='root']/div/div[2]/h2/span")
+	private WebElement tituloLogin;
+	
+	@FindBy(xpath = "//*[@id='app']/section/article/div[2]/div[1]/div/ul/li")
+	private List<WebElement> opcoesFrete;
+
+	@FindBy(id = "main-header-menu-toggle")
+	private WebElement botaoMenu;
+
+	@FindBy(linkText = "Eletrodomésticos")
+	private WebElement opcaoEletrodomesticos;
+
+	@FindBy(linkText = "Geladeiras e Freezeres")
+	private WebElement opcaoGeladeirasFreezeres;
+
+	@FindBy(xpath = "//*[@id='containerpage']/div[5]/div/div/div[2]/section/ul/li/section/div[2]/a")
+	private List<WebElement> listaDeGeladeirasFreezeres;
+
+	@FindBy(xpath = "//*[@id='skusbox']/div/button")
+	private List<WebElement> opcoesTensao;
+	
+	public List<WebElement> getOpcoesFrete() {
+		return opcoesFrete;
+	}
+
+	public WebElement getTituloLogin() {
+		return tituloLogin;
+	}
+
+	public WebElement getBotaoComprarPaginaFrete() {
+		return botaoComprarPaginaFrete;
+	}
+
+	public WebElement getBotaoContinuarPaginaGarantia() {
+		return botaoContinuarPaginaGarantia;
+	}
 
 	public List<WebElement> getTipodeFrete() {
 		return tipodeFrete;
@@ -70,5 +114,25 @@ public class PageObjectClassSouBarato extends PageObject{
 
 	public WebElement getLinkProdutosReembalados() {
 		return linkProdutosReembalados;
+	}
+
+	public WebElement getBotaoMenu() {
+		return this.botaoMenu;
+	}
+
+	public WebElement getOpcaoEletrometiscos() {
+		return this.opcaoEletrodomesticos;
+	}
+
+	public WebElement getOpcaoGeladeirasFreezeres() {
+		return this.opcaoGeladeirasFreezeres;
+	}
+
+	public List<WebElement> getListaDeGeladeirasFreezeres() {
+		return this.listaDeGeladeirasFreezeres;
+	}
+
+	public List<WebElement> getOpcoesTensao() {
+		return this.opcoesTensao;
 	}
 }

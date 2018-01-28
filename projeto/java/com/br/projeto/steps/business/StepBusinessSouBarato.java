@@ -2,6 +2,8 @@ package com.br.projeto.steps.business;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,12 +54,55 @@ public class StepBusinessSouBarato {
 	}
 	
 	public void selecionarQuantidadeProduto(int quantidade){
+		if(!viewElement.getDriver().getPageSource().contains("Minha sacola")){
+			viewElement.click(page.getBotaoContinuarPaginaGarantia());
+		}
 		viewElement.waitForElementIsPresent(20, page.getTituloMinnhaSacola());
 		viewElement.selectByVisibleText(page.getSelectQuantidadeProdutos(), quantidade+"");
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public void preencherCep(String CEP){
 		viewElement.sendText(page.getCampoCEP(), CEP);
 		viewElement.click(page.getBotaoCalculaFrete());
 	}
+
+	public void selecionarTipoFrete(int tipoFrete) {
+		viewElement.waitForElementIsPresent(10, page.getOpcoesFrete().get(2));
+		viewElement.click(page.getOpcoesFrete().get(tipoFrete - 1));
+	}
+
+	public void clicarEmComprarPaginaFrete() {
+		viewElement.click(page.getBotaoComprarPaginaFrete());
+	}
+
+	public boolean validarPaginaLogin() {
+		return viewElement.getText(page.getTituloLogin()).equals("Identificação");
+	}
+
+	public void clicarEmMenu() {
+		viewElement.click(page.getBotaoMenu());
+	}
+
+	public void selecionarOpcaoEletrodomesticos() {
+		viewElement.mouseOver(page.getOpcaoEletrometiscos());
+	}
+
+	public void clicarEmGeladeirasFreezeres() {
+		viewElement.click(page.getOpcaoGeladeirasFreezeres());
+	}
+
+	public void selecionarGeladeiraMarca(String marca) {
+		for(WebElement elemento: page.getListaDeGeladeirasFreezeres()){
+			if(elemento.getText().contains(marca)){
+				viewElement.click(elemento);
+				break;
+			}
+		}
+	}
+
 }

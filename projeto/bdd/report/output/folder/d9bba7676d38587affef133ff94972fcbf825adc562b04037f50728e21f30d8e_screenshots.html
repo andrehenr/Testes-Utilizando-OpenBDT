@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="984be56de10f435478775b0ecfb54be5e368c7a5feaec42cedeff55af6912908.html">Adicionar Geladeira Brastemp Ao Carrinho</a>
+                > <a
+                    href="d9bba7676d38587affef133ff94972fcbf825adc562b04037f50728e21f30d8e.html">Para Adicionar uma geladeira ao carrinho </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 28-01-2018 19:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Adicionar Geladeira Brastemp Ao Carrinho</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="5e96631c96454b7a316919dac1831f742133e12d0aa898f138c06488db288d74.html">Usrum
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Para Adicionar Uma Geladeira Ao Carrinho
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Open home: http://www.soubarato.com.br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="59e2b2e8e3311f50e8f23dcc5db168d346b46e4d7033454b4166af8adb6ae6ed.png" title="Given entro na pagina incial do Sou Barato" width="960"/>
+                <img src="59e2b2e8e3311f50e8f23dcc5db168d346b46e4d7033454b4166af8adb6ae6ed.png" title="Open home: http://www.soubarato.com.br/" width="960"/>
+                <img src="8db9466d1d71f10de1541244dfba89e85bc0d4f68cad25982ddada6e944fe9a2.png" title="And clico no menu" width="960"/>
+                <img src="f0ee23a4f79ec9d1fdef5f1beac0b39e24f7fcf5cceff3f33a36d54c843adb68.png" title="And seleciono Eletrodomesticos" width="960"/>
+                <img src="e46661b8f75829c725327af65376c9c132766de64e25b181a94e1ecc6570b384.png" title="And seleciono Eletrodomesticos" width="960"/>
+                <img src="703e920a93907aa90d48f50eb6a6b69030f37bea5072e12de7e1f0029ee1fa36.png" title="And clico na opcao de Geladeiras e Freezeres" width="960"/>
+                <img src="scaled_57af86ed0e3de4f928d6603a58ebf3e6ef1c49f51c82c6d9d73b32de80ed90b1.png" title="And seleciono geladeira por marca &quot;&lt;marca&gt;&quot;" width="960"/>
+                <img src="scaled_af0b8b9ef17f8779df89d44375709e752eb8617c885045ff55548d90b29ab4ed.png" title="And clico em comprar produto" width="960"/>
+                <img src="scaled_001db6b1051e23333d45acfc513b9581a9c34e2ec29befca84033b0c78aa9c3c.png" title="And confirmo que quero produto" width="960"/>
+                <img src="scaled_58b2622876e3dc77dddc413c5faf71487c7b6ad840405547a24ef12dde66ff26.png" title="And confirmo que quero produto" width="960"/>
+                <img src="scaled_7f5d562e436cda0e3c101e2b279a137cac9d5d5daee3d53e5a17a9956d3062cc.png" title="And seleciono a quantidade &quot;&lt;quantidade&gt;&quot;" width="960"/>
+                <img src="f50c4dc0d8c64034414af795572cf8d5fb98b973a4a5df8050f55ea10d89c3c3.png" title="And preencho cep &quot;&lt;cep&gt;&quot;" width="960"/>
+                <img src="scaled_a595e9db7ad0ca183b121b8acf429234178df36b03c240f56cbe228cc8b6ad44.png" title="And seleciono tipo de frete &quot;&lt;tipo_frete&gt;&quot;" width="960"/>
+                <img src="scaled_f9af856a111bfa8d97eb8eec6e05f2bdf06aa5401e3244b451ea18c83bb8d44a.png" title="And clico em Comprar" width="960"/>
+                <img src="46fdb17ab9a25cef5ab0614fa72c78f36c743081a6d9e8372e0335ff4a591d38.png" title="And clico em Comprar" width="960"/>
+                <img src="46fdb17ab9a25cef5ab0614fa72c78f36c743081a6d9e8372e0335ff4a591d38.png" title="Then valido pagina de identificacao: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>

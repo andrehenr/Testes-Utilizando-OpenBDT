@@ -10,7 +10,9 @@ Scenario Outline: Para adicionar um item ao carrinho
 	And seleciono a quantidade "<quantidade>"
 	And preencho cep "<cep>"
 	And seleciono tipo de frete "<tipo_frete>"
+	And clico em Comprar
+	Then valido pagina de identificacao
 	
 Examples:
 |busca	 |quantidade|cep       |tipo_frete |
-|Smart TV|2         |06321310  |           |
+|Smart TV|2         |06321310  |1          |

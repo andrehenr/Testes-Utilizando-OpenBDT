@@ -1,10 +1,12 @@
 package com.br.projeto.steps.definition;
 
+import org.junit.Assert;
 import org.springframework.test.context.ContextConfiguration;
 
 import com.br.projeto.steps.business.StepBusinessSouBarato;
 
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 
@@ -49,5 +51,38 @@ public class StepDefinitionSouBarato {
 		stepB.preencherCep(CEP);
 	}
 	
-	@When("^seleciono tipo de frete "<tipo_frete>"")
+	@When("^seleciono tipo de frete \"([^\"]*)\"$")
+	public void selecionoTipoFrete(int tipoFrete){
+	    stepB.selecionarTipoFrete(tipoFrete);
+	}
+	
+	@When("^clico em Comprar$")
+	public void clicoComprar(){
+		stepB.clicarEmComprarPaginaFrete();
+	}
+	
+	@Then("^valido pagina de identificacao$")
+	public void validoPaginaIdentificacao(){
+		Assert.assertTrue(stepB.validarPaginaLogin());
+	}
+	
+	@Given("^clico no menu$")
+	public void clicoMenu() {
+	    stepB.clicarEmMenu();
+	}
+
+	@Given("^seleciono Eletrodomesticos$")
+	public void seleciono_Eletrodomesticos() {
+		stepB.selecionarOpcaoEletrodomesticos();
+	}
+
+	@Given("^clico na opcao de Geladeiras e Freezeres$")
+	public void clicoOpcaoGeladeirasFreezeres(){
+		stepB.clicarEmGeladeirasFreezeres();
+	}
+	
+	@Given("^seleciono geladeira por marca \"([^\"]*)\"$")
+	public void selecionoGeladeiraMarca(String marca){
+	    stepB.selecionarGeladeiraMarca(marca);
+	}
 }
