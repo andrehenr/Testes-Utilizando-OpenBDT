@@ -1,6 +1,6 @@
 Feature: Reservar uma diaria um hotel cinco estrelas em São Paulo
 
-@usrum
+@hotel_urbano
 Scenario Outline: Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer uma diaria
 	Given acesso ao site Hotel Urbano
 	When clico na opcao de Hoteis

@@ -1,6 +1,6 @@
 Feature: Pesquisar voos de São Paulo para Salvador
 
-@usrum
+@hotel_urbano
 Scenario Outline: Pesquisar voos de São Paulo para Salvador
 	Given acesso ao site Hotel Urbano
 	When clico na opcao de Aereos

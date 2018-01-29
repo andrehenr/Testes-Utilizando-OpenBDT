@@ -21,7 +21,7 @@ public class StepBusinessCorreios {
 	@Autowired
 	private WebBrowserScreenElement viewElement;
 
-	private static Logger LOG = Logger.getLogger(StepBusiness.class);
+	private static Logger LOG = Logger.getLogger(StepBusinessCorreios.class);
 
 	public boolean clicarEmProximo() {
 		if (viewElement.getDriver().getPageSource().contains("javascript:document.Proxima.submit('Proxima')")) {

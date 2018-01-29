@@ -47,7 +47,8 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaPrimeiroHotel() {
-		viewElement.waitForElementIsPresent(10, page.getResultadoDosHoteis().get(1));
+		int tamanhoLista = page.getResultadoDosHoteis().size();
+		viewElement.waitForElementIsPresent(10, page.getResultadoDosHoteis().get(tamanhoLista-1));
 		List<WebElement> listaElementos = page.getResultadoDosHoteis();
 		listaElementos.get(1).click();
 		mudaDePagina(null);

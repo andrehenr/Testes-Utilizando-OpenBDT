@@ -1,11 +1,11 @@
-Feature: Selecionar Precos e Prazos da RSI Osasco a RSI Alphaville
+Feature: Selecionar Precos e Prazos do CEP A a CEP B
 
-@usrum
-Scenario Outline: Teste para Selecionar Precos e Prazos da RSI Osasco e RSI Alphaville
+@correios
+Scenario Outline: Teste para Selecionar Precos e Prazos um CEP A a CEP B
 	Given acesso ao site dos Correios
 	When clico em Calculador de Precos e Prazos Nacionais no menu suspenso
-	And insiro o cep da RSI OSASCO "<osasco>"
-	And insiro o cep da RSI ALPHAVILLE "<alphaville>"
+	And insiro o cep de origem "<origem>"
+	And insiro o cep de destino "<destino>"
 	And seleciono o tipo de servico "<servico>"
 	And seleciono formato "<formato>"
 	And seleciono origem de embalagem "<embalagem>"
@@ -18,6 +18,6 @@ Scenario Outline: Teste para Selecionar Precos e Prazos da RSI Osasco e RSI Alph
 	Then exibo preco e prazo
 	
 Examples:
-|osasco	    |alphaville  |servico     |formato  |embalagem             |tipo_embalagem |peso |mao_propria |aviso_recebimento |declaracao_valor |valor|
-|06020000   |06454080    |PAC         |caixa	|Embalagem dos Correios|4	           |10   |true       |false              |true             |40000|
+|origem 	|destino  |servico     |formato |embalagem             |tipo_embalagem |peso |mao_propria |aviso_recebimento |declaracao_valor |valor|
+|06321310   |06020000 |PAC         |caixa	|Embalagem dos Correios|2	           |2    |true        |false             |true             |12000|
 

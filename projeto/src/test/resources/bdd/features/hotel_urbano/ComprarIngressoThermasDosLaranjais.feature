@@ -1,6 +1,6 @@
 Feature: Comprar Ingresso Thermas dos Laranjais
 
-@usrum
+@hotel_urbano
 Scenario Outline: Comprar Ingresso Thermas dos Laranjais
 	Given acesso ao site Hotel Urbano
 	When preencho o campo de pesquisa com "<busca>"

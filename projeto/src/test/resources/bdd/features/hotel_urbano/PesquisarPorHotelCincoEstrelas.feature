@@ -1,6 +1,6 @@
 Feature: Pesquisar e selecionar um hotel cinco estrelas no Rio de Janeiro
 
-@usrum
+@hotel_urbano
 Scenario Outline: Pesquisa no Hotel Urbano por um hotel cinco estrelas
 	Given acesso ao site Hotel Urbano
 	When clico na opcao de Hoteis

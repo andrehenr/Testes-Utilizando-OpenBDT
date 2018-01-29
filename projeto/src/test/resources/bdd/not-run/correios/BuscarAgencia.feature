@@ -1,6 +1,6 @@
 Feature: Buscar Agencia dos Correios de Acordo com um endereco
 
-@usrum
+@correios
 Scenario Outline: A busca comeca
 	Given acesso ao site dos Correios
 	When clico na opcao Rede de Atendimento

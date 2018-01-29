@@ -1,20 +1,14 @@
 package com.br.projeto.steps.business;
 
-import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
-import io.openbdt.element.WebBrowserScreenElement;
-import com.br.projeto.pages.PageObjectClass;
 import com.br.projeto.pages.PageObjectClassSouBarato;
 
+import io.openbdt.element.WebBrowserScreenElement;
 import jxl.common.Logger;
-import net.serenity_bdd.core.annotations.findby.By;
 import net.thucydides.core.annotations.Step;
 
 @ContextConfiguration("/appcontext.xml")

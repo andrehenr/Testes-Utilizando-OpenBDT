@@ -1,6 +1,6 @@
 Feature: Buscar Endereco nos Correios passando CEP
 
-@usrum
+@correios
 Scenario Outline: Teste de Buscar Endereco nos Correios passando CEP
 	Given acesso ao site dos Correios
 	When preencho o campo de busca dos correios com CEP "<CEP>"
