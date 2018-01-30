@@ -66,7 +66,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void selecionarTipoFrete(int tipoFrete) {
-		viewElement.waitForElementIsPresent(10, page.getOpcoesFrete().get(2));
+		viewElement.waitForElementIsPresent(30, page.getOpcoesFrete().get(2));
 		viewElement.click(page.getOpcoesFrete().get(tipoFrete - 1));
 	}
 

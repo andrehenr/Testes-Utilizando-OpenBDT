@@ -41,7 +41,7 @@ public class PageObjectClassSouBarato extends PageObject {
 	@FindBy(css = ".warranty-button")
 	private WebElement botaoContinuarPaginaGarantia;
 
-	@FindBy(id = "buy-button")
+	@FindBy(xpath = "//*[@id='app']/section/div[3]/div/div[2]/ul/li/a")
 	private WebElement botaoComprarPaginaFrete;
 
 	@FindBy(xpath = "//*[@id='root']/div/div[2]/h2/span")

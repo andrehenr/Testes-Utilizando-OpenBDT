@@ -196,7 +196,7 @@ public class StepBusinessCorreios {
 			List<WebElement> dadosAgencia = viewElement.findElements(By.xpath("//*[@id='detalheAgencia"+agencia+"']/tbody/tr"));
 			LOG.info("Dados Agência:");
 			int i = 0;
-			while(!dadosAgencia.get(i).getText().contains("Dados") && i < 18) {
+			while(!dadosAgencia.get(i).getText().contains("Dados") && i < dadosAgencia.size()) {
 				LOG.info(dadosAgencia.get(i).getText());
 				i++;
 			}

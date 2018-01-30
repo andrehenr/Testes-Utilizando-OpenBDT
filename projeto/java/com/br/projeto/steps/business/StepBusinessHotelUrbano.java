@@ -47,9 +47,8 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaPrimeiroHotel() {
-		int tamanhoLista = page.getResultadoDosHoteis().size();
-		viewElement.waitForElementIsPresent(10, page.getResultadoDosHoteis().get(tamanhoLista-1));
-		List<WebElement> listaElementos = page.getResultadoDosHoteis();
+		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(10));
+		List<WebElement> listaElementos = page.getLinkDosHoteis();
 		listaElementos.get(1).click();
 		mudaDePagina(null);
 	}
@@ -80,24 +79,27 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaDataIdaVoo(String dataIda) {
-		String[] data = dataIda.split(" ");
 		viewElement.click(page.getCampoDataIda());
-		while (!page.getMesSelecionadoIda().getText().contains(data[1])) {
-			viewElement.click(page.getBotaoProximoMes());
-		}
-		boolean comecouMes = false;
-		int d = 0;
-		while (!comecouMes) {
-			if (page.getDiasDoCalendarioEmExibicao().get(d).getText().equals("1")) {
-				comecouMes = true;
-			} else {
-				d++;
-			}
-		}
-		while (!page.getDiasDoCalendarioEmExibicao().get(d).getText().equals(Integer.valueOf(data[0]).toString())) {
-			d++;
-		}
-		viewElement.click(page.getDiasDoCalendarioEmExibicao().get(d));
+		this.selecionarDataNoDatePicker(dataIda, page.getMesSelecionadoIda(),
+				page.getBotaoProximoMesVoo(), page.getDiasDoCalendarioEmExibicao(), 42);
+//		String[] data = dataIda.split(" ");
+//		viewElement.click(page.getCampoDataIda());
+//		while (!page.getMesSelecionadoIda().getText().contains(data[1])) {
+//			viewElement.click(page.getBotaoProximoMes());
+//		}
+//		boolean comecouMes = false;
+//		int d = 0;
+//		while (!comecouMes) {
+//			if (page.getDiasDoCalendarioEmExibicao().get(d).getText().equals("1")) {
+//				comecouMes = true;
+//			} else {
+//				d++;
+//			}
+//		}
+//		while (!page.getDiasDoCalendarioEmExibicao().get(d).getText().equals(Integer.valueOf(data[0]).toString())) {
+//			d++;
+//		}
+//		viewElement.click(page.getDiasDoCalendarioEmExibicao().get(d));
 	}
 
 	public void selecionarQuantidadeAdultos(int quantidadeAdultos) {

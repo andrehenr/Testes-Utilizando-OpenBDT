@@ -21,6 +21,9 @@ public class PageObjectClassHotelUrbano extends PageObject {
 
 	@FindBy(xpath = "//*[@id='filters']/aside/div[2]/div[2]/div[2]/label[1]")
 	private WebElement checkBoxHoteisCincoEstrelas;
+	
+	@FindBy(xpath = "//*[@id='result-card']/div/div/a")
+	private List<WebElement> linkDosHoteis;
 
 	@FindBy(xpath = "//*[@id='result-card']/div")
 	private List<WebElement> resultadoDosHoteis;
@@ -39,6 +42,9 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	
 	@FindBy(xpath = "//*[@id='search-date-depart']/div[1]/button")
 	private WebElement campoDataIda;
+	
+	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[3]")
+	private WebElement botaoProximoMesVoo;
 	
 	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[1]/div/button/div/span")
 	private WebElement mesSelecionadoIda;
@@ -111,6 +117,14 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	
 	@FindBy(xpath = "//*[@id='ui-datepicker-div']/div/a[2]")
 	private WebElement linkProximoMes;
+
+	public List<WebElement> getLinkDosHoteis() {
+		return linkDosHoteis;
+	}
+
+	public WebElement getBotaoProximoMesVoo() {
+		return botaoProximoMesVoo;
+	}
 
 	public List<WebElement> getDiasDiponiveisParaReservaEntrada() {
 		return diasDiponiveisParaReservaEntrada;

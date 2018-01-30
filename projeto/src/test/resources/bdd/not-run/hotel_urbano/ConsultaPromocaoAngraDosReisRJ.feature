@@ -1,7 +1,7 @@
-Feature: Consultar se ha promocao no trajeto Angra dos Reis/Rio de Janeiro
+Feature: Consultar se ha promocao no trajeto Angra dos Reis
 
 @hotel_urbano
-Scenario Outline: Consulta Prmocoes em Angra dos Reis
+Scenario Outline: Consulta Promocoes em Angra dos Reis
 	Given acesso ao site Hotel Urbano
 	When clico em Promocoes
 	Then verifico promocoes para "<local>"
