@@ -47,10 +47,9 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaPrimeiroHotel() {
-		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(10));
-		List<WebElement> listaElementos = page.getLinkDosHoteis();
-		listaElementos.get(1).click();
-		mudaDePagina(null);
+		int tamanhoListaHoteis = page.getResultadoDosHoteis().size();
+		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1));
+		viewElement.navigate(page.getLinkDosHoteis().get(0).getAttribute("href"));
 	}
 
 	public void mudaDePagina(WebElement elementoEsperado) {
@@ -169,11 +168,15 @@ public class StepBusinessHotelUrbano {
 
 	public void selecionarHotelPeloNome(String nomeHotel) {
 		viewElement.waitForElementIsPresent(20, page.getNomesDosHoteis().get(0));
+		boolean achou = false;
 		for (int i = 0; i < page.getNomesDosHoteis().size(); i++) {
 			if (page.getNomesDosHoteis().get(i).getText().contains(nomeHotel)) {
-				viewElement.click(page.getResultadoDosHoteis().get(i));
-				mudaDePagina(null);
+				achou = true;
+				viewElement.navigate(page.getLinkDosHoteis().get(i).getAttribute("href"));
 			}
+		}
+		if(!achou){
+			viewElement.navigate(page.getLinkDosHoteis().get(1).getAttribute("href"));
 		}
 	}
 

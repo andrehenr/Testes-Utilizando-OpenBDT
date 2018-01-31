@@ -2,10 +2,9 @@ package com.br.projeto.pages;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
 import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassSouBarato extends PageObject {
@@ -13,6 +12,9 @@ public class PageObjectClassSouBarato extends PageObject {
 	                 
 	@FindBy(xpath = "//*[@id='containerpage']/div[2]/div/div/div/section/ul/li/section/div[2]/a")
 	private List<WebElement> listaDePordutosReembalados;
+	
+	@FindBy(xpath = "//*[@id='lightpop']/div/div[2]/a")
+	private WebElement botaoFechaAbaReceberPromocoes;
 
 	@FindBy(linkText = "Produtos Reembalados")
 	private WebElement linkProdutosReembalados;
@@ -85,6 +87,10 @@ public class PageObjectClassSouBarato extends PageObject {
 	
 	@FindBy(linkText = "Produtos Usados")
 	private WebElement linkPordutosUsados;
+
+	public WebElement getBotaoFechaAbaReceberPromocoes() {
+		return botaoFechaAbaReceberPromocoes;
+	}
 
 	public WebElement getLinkPordutosUsados() {
 		return linkPordutosUsados;

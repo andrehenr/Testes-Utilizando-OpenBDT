@@ -19,11 +19,16 @@ public class StepBusinessSouBarato {
 	
 	@Autowired
 	private WebBrowserScreenElement viewElement; // OBJETO QUE CONT�M M�TODOS PR�PRIOS DO FRAMEWORK
+	
 
 	@Step
 	public void openHome(String url) {
 		viewElement.open(url);
 		viewElement.getDriver().manage().window().maximize();
+	}
+	
+	public void fecharPopUpReceberPromocoes(){
+		viewElement.click(page.getBotaoFechaAbaReceberPromocoes());
 	}
 
 	public void clicarEmProdutosReembalados() {
@@ -100,6 +105,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void pesquisarPor(String iphone) {
+		viewElement.click(page.getCampoBusca());
 		viewElement.sendText(page.getCampoBusca(), iphone + Keys.ENTER.toString());
 	}
 

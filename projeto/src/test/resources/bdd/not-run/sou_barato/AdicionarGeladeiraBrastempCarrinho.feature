@@ -3,6 +3,7 @@ Feature: Adicionar Geladeira Brastemp ao Carrinho
 @sou_barato
 Scenario Outline: Para Adicionar uma geladeira ao carrinho
 	Given entro na pagina incial do Sou Barato
+	When fecho popup recebimento de promocoes
 	And clico no menu 
 	And seleciono Eletrodomesticos
 	And clico na opcao de Geladeiras e Freezeres

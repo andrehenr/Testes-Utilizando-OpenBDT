@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="Pesquisar voos de São Paulo para Salvador" skipped="0" tests="1" time="87.16" timestamp="2018-01-29 02:55:54"><testcase name="Pesquisar voos de São Paulo para Salvador"><error message="Error on click element: Proxy element for: PageObjectClassHotelUrbano.botaoProximoMes" type="io.openbdt.exception.WebElementException">Error on click element: Proxy element for: PageObjectClassHotelUrbano.botaoProximoMes</error><system-err>Error on click element: Proxy element for: PageObjectClassHotelUrbano.botaoProximoMes&#13;
-io.openbdt.element.WebBrowserScreenElement.click(WebBrowserScreenElement.java:110)&#13;
-com.br.projeto.steps.business.StepBusinessHotelUrbano.selecionaDataIdaVoo(StepBusinessHotelUrbano.java:86)&#13;
-com.br.projeto.steps.definition.StepDefinitionHotelUrbano.selecionoDataIda(StepDefinitionHotelUrbano.java:73)&#13;
-io.openbdt.run.SuiteTestRunner.runWithJunit(SuiteTestRunner.java:21)&#13;
-com.br.projeto.runner.RunnerTest.test(RunnerTest.java:33)&#13;
-org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)&#13;
-org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)&#13;
-org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)&#13;
-org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:254)&#13;
-org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Pesquisar voos de São Paulo para Salvador" skipped="0" tests="1" time="59.17" timestamp="2018-01-31 12:28:48"><testcase name="Pesquisar voos de São Paulo para Salvador"/></testsuite>

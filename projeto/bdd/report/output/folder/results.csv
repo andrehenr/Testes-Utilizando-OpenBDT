@@ -1,1 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
+"Comprar Ingresso Thermas dos Laranjais","Comprar Ingresso Thermas dos Laranjais","SUCCESS","2018-01-31T12:25:19.800-02:00","0.0","98.02"
+"Consultar se ha promocao no trajeto Angra dos Reis","Consulta Promocoes em Angra dos Reis","SUCCESS","2018-01-31T12:26:59.275-02:00","0.0","23.93"
+"Pesquisar e selecionar um hotel cinco estrelas no Rio de Janeiro","Pesquisa no Hotel Urbano por um hotel cinco estrelas","SUCCESS","2018-01-31T12:27:23.559-02:00","0.0","83.71"
+"Reservar uma diaria um hotel cinco estrelas em São Paulo","Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer uma diaria","SUCCESS","2018-01-31T12:29:47.818-02:00","0.0","69.92"
+"Pesquisar voos de São Paulo para Salvador","Pesquisar voos de São Paulo para Salvador","SUCCESS","2018-01-31T12:28:48.270-02:00","0.0","59.17"

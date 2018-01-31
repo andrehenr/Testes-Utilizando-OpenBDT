@@ -3,6 +3,7 @@ Feature: Adicionar um Iphone ao Carrinho
 @sou_barato
 Scenario Outline: Para adicionar um Iphone ao carrinho 
 	Given entro na pagina incial do Sou Barato
+	When fecho popup recebimento de promocoes
 	When pesquiso por "Iphone"
 	And seleciono a primeira ocorrencia
 	And clico em comprar produto

@@ -3,6 +3,7 @@ Feature: Adicionar um produto reembalado ao carinho
 @sou_barato
 Scenario Outline: Para adicionar um produto reembalado ao carrinho
 	Given entro na pagina incial do Sou Barato
+	When fecho popup recebimento de promocoes
 	When clico no link de Produtos Reembalados
 	And seleciono produto que tem a palavra "<busca>"
 	And clico em comprar produto

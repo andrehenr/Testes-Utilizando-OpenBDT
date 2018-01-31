@@ -3,6 +3,7 @@ Feature: Calcular Frete de qualquer produto até a RSI Osasco
 @sou_barato
 Scenario Outline: Para calcular o frete
 	Given entro na pagina incial do Sou Barato
+	When fecho popup recebimento de promocoes
 	When clico no link de Produtos Usados
 	And seleciono produto que tem a palavra "<busca>"
 	And clico em comprar produto
@@ -12,4 +13,4 @@ Scenario Outline: Para calcular o frete
 	
 Examples:
 |busca	 |quantidade|cep       |
-|Notebook|1         |06020000  |
+|TV      |1         |06020000  |

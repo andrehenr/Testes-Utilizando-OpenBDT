@@ -35,7 +35,7 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var plot1 = $.jqplot('coverage_pie_chart', [
             [
-                ['Passing', 0],
+                ['Passing', 5],
                 ['Pending', 0],
                 ['Ignored', 0],
                 ['Failing', 0],
@@ -68,7 +68,7 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 requirements tested successfully'},
+                {label: '5 requirements tested successfully'},
                 {label: '0 requirements pending'},
                 {label: '0} requirements skipped'},
                 {label: '0} requirements with failures'},
@@ -160,7 +160,7 @@
             <a href="#"><i class="fa fa-book"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 31-01-2018 12:25</span>
     <br style="clear:left"/>
 </div>
 
@@ -171,7 +171,223 @@
         <div class="middlb">
             <div class="table">
 
+                <div id="requirements-summary">
+                    <div id="coverage_pie_chart"
+                         style="margin-top:10px; margin-left:10px; width:250px; height:250px;"></div>
+                    <div id="coverage_summary">
+                        <div>
+                            <h4>Requirements Overview</h4>
+                            <table class="summary-table">
+                                <head>
+                                    <tr>
+                                        <th>Requirement Type</th>
+                                        <th>Total</th>
+                                        <th>Pass&nbsp;<i class="icon-check"></i></th>
+                                        <th>Fail&nbsp;<i class="icon-thumbs-down"></i></th>
+                                        <th>Pending&nbsp;<i class="icon-calendar"></i></th>
+                                        <th>Ignored&nbsp;<i class="icon-ban-circle"></i></th>
+                                    </tr>
+                                </head>
+                                <body>
 
+                                <tr>
+                                    <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
+                                    <td>5</td>
+                                    <td>5</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                </tr>
+                                </body>
+                            </table>
+                        </div>
+
+
+
+
+
+<div>
+    <h4>Test Result Summary</h4>
+    <table class="summary-table">
+        <head>
+            <tr>
+                <th>Test Type</th>
+                <th>Total</th>
+                <th>Pass&nbsp;<i class="icon-check"/> </th>
+                <th>Fail&nbsp;<i class="icon-thumbs-down"/></th>
+                <th>Pending&nbsp;<i class="icon-calendar"/></th>
+                <th>Ignore/Skip&nbsp;<i class="icon-ban-circle"/></th>
+            </tr>
+        </head>
+        <body>
+        <tr>
+            <td class="summary-leading-column">Automated</td>
+            <td>5</td>
+            <td>5 (100%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Manual</td>
+            <td>0</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total</td>
+            <td>5</td>
+            <td>5 (100%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total Duration</td>
+                <td colspan="5">5 minutes 34 seconds</td>
+        </tr>
+        </body>
+    </table>
+</div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+
+                <div id="requirements-tabs">
+<table>
+    <tr>
+        <td>
+            <div><h3>Acceptance Criteria</h3></div>
+            <div id="test_list_tests" class="table">
+                <div class="test-results">
+                    <table id="test-results-table">
+                        <thead>
+                        <tr>
+                            <th width="50" class="test-results-heading">&nbsp;</th>
+                            <th width="%" class="test-results-heading">Tests</th>
+                            <th width="70" class="test-results-heading">Steps</th>
+
+                            <th width="100" class="test-results-heading">Duration<br>(seconds)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="e2874c91eba3aaf18e6337ee6797940a36ea7452e9359127f374538509b17916.html" class="ellipsis"
+                                           title="Comprar Ingresso Thermas dos Laranjais ">
+                                            Comprar Ingresso Thermas dos Laranjais&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">9</td>
+
+
+                                <td class="lightgreentext">98.02</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="6c92245d8504c37c17807a29da5c5555482857c5c074126b6b59adbd2975c25d.html" class="ellipsis"
+                                           title="Consulta Promocoes em Angra dos Reis ">
+                                            Consulta Promocoes em Angra dos Reis&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">4</td>
+
+
+                                <td class="lightgreentext">23.93</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="16a6485ed6d842410a74830ee4440667b314124b922b8a3c57a99645b4f83f4e.html" class="ellipsis"
+                                           title="Pesquisa no Hotel Urbano por um hotel cinco estrelas ">
+                                            Pesquisa no Hotel Urbano por um hotel cinco estrelas&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">9</td>
+
+
+                                <td class="lightgreentext">83.71</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="d16a0c1b8bde405fb9784fd6d04d37ab9ca3751673cc1e05a25b00b011950b16.html" class="ellipsis"
+                                           title="Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer uma diaria ">
+                                            Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer uma diaria&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">13</td>
+
+
+                                <td class="lightgreentext">69.92</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="fde8e6848079907a0c60416a635413e4deed4636ad1029f08e1a7217396cd8fb.html" class="ellipsis"
+                                           title="Pesquisar voos de S&atilde;o Paulo para Salvador ">
+                                            Pesquisar voos de S&atilde;o Paulo para Salvador&nbsp;(1  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="lightgreentext">10</td>
+
+
+                                <td class="lightgreentext">59.17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+                </div>
             </div>
         </div>
     </div>

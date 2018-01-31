@@ -21,6 +21,11 @@ public class StepDefinitionSouBarato {
 	public void acessarSouBarato() {
 	    stepB.openHome("http://www.soubarato.com.br/");
 	}
+	
+	@When("^fecho popup recebimento de promocoes$")
+	public void fecharPopUpPromocoes(){
+		stepB.fecharPopUpReceberPromocoes();
+	}
 
 	@When("^clico no link de Produtos Reembalados$")
 	public void clicarLinkProdutos_Reembalados(){

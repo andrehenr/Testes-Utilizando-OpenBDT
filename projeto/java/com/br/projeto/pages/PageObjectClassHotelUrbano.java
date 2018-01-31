@@ -22,7 +22,7 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	@FindBy(xpath = "//*[@id='filters']/aside/div[2]/div[2]/div[2]/label[1]")
 	private WebElement checkBoxHoteisCincoEstrelas;
 	
-	@FindBy(xpath = "//*[@id='result-card']/div/div/a")
+	@FindBy(xpath = "//*[@id='result-card']/div/div/div[2]/div[2]/div[1]/div/h3/a")
 	private List<WebElement> linkDosHoteis;
 
 	@FindBy(xpath = "//*[@id='result-card']/div")
