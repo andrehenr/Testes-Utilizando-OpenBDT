@@ -1,7 +1,7 @@
-Feature: Adicionar um tênis ao carrinho, limpar o carinho e volta a loja
+Feature: Adicionar um tênis ao carrinho, limpar o carinho e voltar a loja
 
 @netshoes
-Scenario Outline: Para comecar o teste de limpar o carrinho
+Scenario Outline: Para começar o teste de limpar o carrinho
 	Given acesso a pagina inicial da Net Shoes
 	When clico sobre o link de Calcados
 	And pesquiso por tenis "<busca>"

@@ -18,7 +18,7 @@ public class StepBusinessNetShoes {
 	private static Logger LOG = Logger.getLogger(StepBusinessNetShoes.class);
 	
 	@Autowired
-	private WebBrowserScreenElement viewElement; // OBJETO QUE CONT�M M�TODOS PR�PRIOS DO FRAMEWORK
+	private WebBrowserScreenElement viewElement;
 
 	@Step
 	public void openHome(String url) {
@@ -116,6 +116,7 @@ public class StepBusinessNetShoes {
 		for(WebElement elemento : page.getListaTamanhoTenis()){
 			if(elemento.getText().equals(tamanho)){
 				viewElement.click(elemento);
+				break;
 			}
 		}
 	}

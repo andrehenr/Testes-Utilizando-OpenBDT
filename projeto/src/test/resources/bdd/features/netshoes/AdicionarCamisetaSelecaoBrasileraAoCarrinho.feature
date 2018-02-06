@@ -1,7 +1,7 @@
-Feature: Adicionar uma camiseta da seleção Brasileira ao Carrinho
+Feature: Adicionar uma camiseta da seleção Brasileira ao carrinho
 
 @netshoes
-Scenario Outline: Para adicionar uma camiseta da selecao ao carrinho
+Scenario Outline: Para adicionar uma camiseta da seleção ao carrinho
 	Given acesso a pagina inicial da Net Shoes
 	When pesquiso por Camiseta da Selecao
 	And seleciono por palavra "<palavra>"

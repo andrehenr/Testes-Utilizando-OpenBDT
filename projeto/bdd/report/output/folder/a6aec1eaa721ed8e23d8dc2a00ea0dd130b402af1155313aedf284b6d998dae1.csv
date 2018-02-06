@@ -1,6 +1,6 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Buscar Agencia dos Correios de Acordo com um endereco","A busca comeca","SUCCESS","2018-01-31T13:05:03.082-02:00","0.0","17.56"
-"Buscar CEP nos Correios utilizando Endereco","Teste de Buscar CEP nos Correios utilizando Endereco","SUCCESS","2018-01-31T13:08:51.385-02:00","0.0","25.08"
+"Buscar Agencia dos Correios de Acordo com um endereco","A busca comeca","SUCCESS","2018-02-01T13:58:38.942-02:00","0.0","22.65"
+"Buscar CEP nos Correios utilizando Endereco","Teste de Buscar CEP nos Correios utilizando Endereco","SUCCESS","2018-02-01T13:59:03.502-02:00","0.0","26.83"
 "Buscar Endereco nos Correios passando CEP","Teste de Buscar Endereco nos Correios passando CEP","SUCCESS","2018-01-31T13:09:17.768-02:00","0.0","9.59"
 "Selecionar Precos e Prazos da RSI Osasco a RSI Alphaville","Teste para Selecionar Precos e Prazos da RSI Osasco e RSI Alphaville","SUCCESS","2018-01-31T13:14:28.269-02:00","0.0","25.39"
 "Selecionar Precos e Prazos do CEP A a CEP B","Teste para Selecionar Precos e Prazos um CEP A a CEP B","SUCCESS","2018-01-31T13:14:54.004-02:00","0.0","25.99"

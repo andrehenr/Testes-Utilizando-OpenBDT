@@ -171,6 +171,4 @@ public class StepDefinitionHotelUrbano {
 	public void clico_no_botao_verificar_disponibilidade() {
 		stepB.clicarEmReservar();
 	}
-	
-
 }

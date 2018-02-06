@@ -1,7 +1,7 @@
 Feature: Adicionar um tênis ao carrinho
 
 @netshoes
-Scenario Outline: Para adicionar um tenis ao carrinho
+Scenario Outline: Para adicionar um tênis ao carrinho
 	Given acesso a pagina inicial da Net Shoes
 	When clico sobre o link de Calcados
 	And pesquiso por tenis "<busca>"
@@ -11,5 +11,5 @@ Scenario Outline: Para adicionar um tenis ao carrinho
 	Then valido escolha correta "<busca>""<cor>""<tamanho>"
 	
 Examples:
-|busca |cor   |tamanho|
-|Adidas|Preto |42     |
+|busca |cor        |tamanho|
+|Nike  |Azul+Preto |35     |

@@ -1,7 +1,7 @@
 Feature: Adicionar um tênis ao carrinho e calcular o frete
 
 @netshoes
-Scenario Outline: Para adicionar um tenis ao carrinho e calcular o frete
+Scenario Outline: Para adicionar um tênis ao carrinho e calcular o frete
 	Given acesso a pagina inicial da Net Shoes
 	When clico sobre o link de Calcados
 	And pesquiso por tenis "<busca>"
@@ -14,4 +14,4 @@ Scenario Outline: Para adicionar um tenis ao carrinho e calcular o frete
 	
 Examples:
 |busca |cor   |tamanho|cep       |
-|Adidas|Preto |42     |06020-000 |
+|Adidas|Preto |39     |06020-000 |

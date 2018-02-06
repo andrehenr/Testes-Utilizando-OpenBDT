@@ -20,7 +20,7 @@ public class StepBusinessHotelUrbano {
 	private static Logger LOG = Logger.getLogger(StepBusinessHotelUrbano.class);
 
 	@Autowired
-	private WebBrowserScreenElement viewElement; // OBJETO QUE CONT�M M�TODOS PR�PRIOS DO FRAMEWORK
+	private WebBrowserScreenElement viewElement; 
 
 	@Step
 	public void openHome(String url) {
@@ -49,7 +49,7 @@ public class StepBusinessHotelUrbano {
 	public void selecionaPrimeiroHotel() {
 		int tamanhoListaHoteis = page.getResultadoDosHoteis().size();
 		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1));
-		viewElement.navigate(page.getLinkDosHoteis().get(0).getAttribute("href"));
+		viewElement.navigate(page.getLinkDosHoteis().get(1).getAttribute("href"));
 	}
 
 	public void mudaDePagina(WebElement elementoEsperado) {

@@ -18,7 +18,7 @@ public class StepBusinessSouBarato {
 	private static Logger LOG = Logger.getLogger(StepBusinessSouBarato.class);
 	
 	@Autowired
-	private WebBrowserScreenElement viewElement; // OBJETO QUE CONT�M M�TODOS PR�PRIOS DO FRAMEWORK
+	private WebBrowserScreenElement viewElement;
 	
 
 	@Step
