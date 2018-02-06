@@ -18,4 +18,4 @@ Scenario Outline: Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer u
 
 Examples:
 |cidade    |hotel 					|entrada 		  |saida          |quartos   |adultos|criancas|
-|São Paulo |Radisson Vila Olímpia   |3 de Fevereiro   |15 de Fevereiro|2         |1      |0       |
+|São Paulo |Radisson Vila Olímpia   |6 de Fevereiro   |15 de Fevereiro|2         |1      |0       |

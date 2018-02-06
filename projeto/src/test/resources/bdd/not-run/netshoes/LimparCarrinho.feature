@@ -14,4 +14,4 @@ Scenario Outline: Para começar o teste de limpar o carrinho
 	
 Examples:
 |busca |cor   |tamanho|
-|Nike  |Cinza |42     |
+|Nike  |Cinza |34     |
