@@ -1,5 +1,7 @@
 package com.br.projeto.steps.business;
 
+import java.util.ArrayList;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +9,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 import com.br.projeto.pages.PageObjectClassNetShoes;
 
+import groovyjarjarantlr.collections.List;
 import io.openbdt.element.WebBrowserScreenElement;
 import jxl.common.Logger;
 import net.thucydides.core.annotations.Step;
@@ -41,7 +44,7 @@ public class StepBusinessNetShoes {
 	
 	public void selecionarCorTenis(String cor){
 		for(WebElement elemento: page.getListaCoresCalcados()){
-			if(elemento.getText().contains(cor)){
+			if(elemento.getAttribute("data-property-name").contains(cor)){
 				viewElement.click(elemento);
 				break;
 			}
@@ -62,9 +65,16 @@ public class StepBusinessNetShoes {
 	}
 
 	public boolean validarProdutoCorreto(String busca, String cor, String tamanho) {
-		return page.getNomeProduto().getText().contains(busca) &&
-				page.getListaAtributosPreCompra().get(0).getText().contains(cor) &&
-				page.getListaAtributosPreCompra().get(1).getText().contains(tamanho);
+		String[] corConcatenada = cor.split(" e ");
+		ArrayList<String> atributos = new ArrayList<>();
+		atributos.add(page.getListaAtributosPreCompra().get(0).getText());
+		atributos.add(page.getListaAtributosPreCompra().get(1).getText());
+		if(atributos.get(0).contains("Cor")){
+			return page.getNomeProduto().getText().contains(busca) && atributos.get(0).contains(corConcatenada[0]+"+"+corConcatenada[1]) && atributos.get(1).contains(tamanho);
+		}
+		else{
+			return page.getNomeProduto().getText().contains(busca) && atributos.get(0).contains(tamanho) && atributos.get(1).contains(corConcatenada[0]+"+"+corConcatenada[1]);
+		}
 	}
 
 	public void pesquisarCamisetaSelecao() {
@@ -90,8 +100,13 @@ public class StepBusinessNetShoes {
 	}
 
 	public boolean validarInformacoesCamiseta(String palavra, String tamanho) {
-		return page.getListaAtributosPreCompra().get(1).getText().contains(tamanho) &&
-				page.getNomeProduto().getText().contains(palavra);
+		for(WebElement element: page.getListaAtributosPreCompra()){
+			if(element.getText().contains(tamanho)){
+				return page.getNomeProduto().getText().contains(palavra);
+			}
+		}
+		return false;
+				
 	}
 
 	public void preencherCaixaBusca(String busca) {
@@ -99,14 +114,20 @@ public class StepBusinessNetShoes {
 	}
 
 	public void clicarEmTenis() {
-		viewElement.click(page.getLinkTenisOutlet());
+		for(WebElement element: page.getLinksOutlet()){
+			if(element.getText().contains("Calçados Masculinos")){
+				viewElement.click(element);
+				break;
+			}
+		}
 	}
 
 	public void buscarPorTenis(double preco) {
-		for(WebElement elemento: page.getListaTenisPreco()){
-			String valorModificado = elemento.getText().replace(",", ".").substring(3);
+		for(int i = 0; i < page.getListaTenisPreco().size(); i++){
+			WebElement element = page.getListaTenisPreco().get(i);
+			String valorModificado = element.getText().replace(",", ".").substring(3,9).replace(" ", "");
 			if(Double.valueOf(valorModificado) < preco){
-				viewElement.click(elemento);
+				viewElement.click(page.getListaCalcados().get(i));
 				break;
 			}
 		}
@@ -126,9 +147,7 @@ public class StepBusinessNetShoes {
 	}
 
 	public void preencherCampoCEP(String cep) {
-		String[] cepSeparado = cep.split("-");
-		viewElement.sendText(page.getPrimeiroCampoCEP(), cepSeparado[0]);
-		viewElement.sendText(page.getSegundoCampoCep(), cepSeparado[1]);
+		viewElement.sendText(page.getCampoCEP(), cep);
 	}
 
 	public void exibirFrete() {

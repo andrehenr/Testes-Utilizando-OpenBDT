@@ -135,7 +135,7 @@ public class StepDefinitionHotelUrbano {
 
 	@Then("^verifico promocoes para \"([^\"]*)\"$")
 	public void verificoPromocoesPara(String local) {
-	    Assert.assertTrue(stepB.verificarPromocoes(local));
+	    stepB.verificarPromocoes(local);
 	}
 	
 	@When("^seleciono hotel \"([^\"]*)\"$")

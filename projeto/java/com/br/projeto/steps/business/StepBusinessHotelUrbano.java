@@ -50,7 +50,7 @@ public class StepBusinessHotelUrbano {
 		int tamanhoListaHoteis = page.getResultadoDosHoteis().size();
 		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1));
 		//Navego para o primeiro hotel cinco estrelas
-		viewElement.navigate(page.getLinkDosHoteis().get(2).getAttribute("href"));
+		viewElement.navigate(page.getLinkDosHoteis().get(3).getAttribute("href"));
 	}
 
 	public void mudaDePagina(WebElement elementoEsperado) {
@@ -140,14 +140,16 @@ public class StepBusinessHotelUrbano {
 		viewElement.click(page.getLinkPromocoes());
 	}
 
-	public boolean verificarPromocoes(String local) {
+	public void verificarPromocoes(String local) {
 		viewElement.scrollIntoView(page.getLocaisRegiaoSudestePromocao().get(0));
+		boolean existePromocao = false;
 		for (WebElement elemento : page.getLocaisRegiaoSudestePromocao()) {
 			if (elemento.getText().contains(local)) {
-				return true;
+				existePromocao = true;
+				break;
 			}
 		}
-		return false;
+		LOG.info((existePromocao? "Há":"Não há")+" promoções para Angra dos Reis");
 	}
 
 	public void selecionarHotelPeloNome(String nomeHotel) {

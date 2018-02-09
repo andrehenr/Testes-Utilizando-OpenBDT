@@ -9,55 +9,52 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassNetShoes extends PageObject {
 
-	@FindBy(id = "CALÇADOS-link")
+	@FindBy(linkText = "CALÇADOS")
 	private WebElement linkCalcados;
 
-	@FindBy(css = ".name")
+	@FindBy(xpath = "//*[@id='item-list']/div[1]/div")
 	private List<WebElement> listaCalcados;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div[3]/div/form/div[3]/ul/li/label/a")
+	@FindBy(xpath = "//*[@id='buy-box']/section[1]/div/ul/li/a")
 	private List<WebElement> listaCoresCalcados;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div[3]/div/form/div[4]/ul/li/label/span")
+	@FindBy(xpath = "//*[@id='buy-box']/section[2]/div/ul/li/a")
 	private List<WebElement> listaTamanhoCalcados;
 
-	@FindBy(id = "buy-now-button")
+	@FindBy(id = "buy-button-now")
 	private WebElement botaoComprar;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tbody/tr/td[1]/div/div[2]/div[1]/ul/li")
+	@FindBy(xpath = "//*[@id='content']/section/div/section/table/tbody/tr/td[1]/div[2]/div[3]/ul/li")
 	private List<WebElement> listaAtributosPreCompra;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tbody/tr/td[1]/div/div[2]/p[1]/a")
+	@FindBy(xpath = "//*[@id='content']/section/div/section/table/tbody/tr/td[1]/div[2]/strong")
 	private WebElement nomeProduto;
 
-	@FindBy(id = "search")
+	@FindBy(id = "search-input")
 	private WebElement campoBusca;
 
-	@FindBy(css = ".nm-product-name")
+	@FindBy(xpath = "//*[@id='item-list']/div/div")
 	private List<WebElement> listaCamisetas;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[1]/div[3]/div/form/div[4]/ul/li/label/span")
+	@FindBy(xpath = "//*[@id='buy-box']/section[2]/div/ul/li")
 	private List<WebElement> listaTamanhoCamisetas;
 
-	@FindBy(linkText = "Tênis")
-	private WebElement linkTenisOutlet;
+	@FindBy(xpath = "//*[@id='involucro']/section[2]/ul/li")
+	private List<WebElement> linksOutlet;
 
-	@FindBy(css = ".new-price")
+	@FindBy(xpath = "//*[@id='item-list']/div[1]/div/div[2]/a")
 	private List<WebElement> listaTenisPreco;
 
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[2]/div[3]/div/form/div[4]/ul/li/label/span")
 	private List<WebElement> listaTamanhoTenis;
 
-	@FindBy(name = "cep-first-input")
-	private WebElement primeiroCampoCEP;
-
-	@FindBy(name = "cep-second-input")
-	private WebElement segundoCampoCep;
-
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[1]/div/form/div/div/div[4]/button")
+	@FindBy(name = "shipping[zipCode]")
+	private WebElement campoCEP;
+	
+	@FindBy(className = "calculate-shipping__button")
 	private WebElement botaoCalcularFrete;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[1]/td[3]/p")
+	@FindBy(id = "column-shipping-calculated")
 	private WebElement informacoesSobreFrete;
 	
 	@FindBy(xpath = "/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
@@ -78,12 +75,8 @@ public class PageObjectClassNetShoes extends PageObject {
 		return informacoesSobreFrete;
 	}
 
-	public WebElement getPrimeiroCampoCEP() {
-		return primeiroCampoCEP;
-	}
-
-	public WebElement getSegundoCampoCep() {
-		return segundoCampoCep;
+	public WebElement getCampoCEP() {
+		return campoCEP;
 	}
 
 	public WebElement getBotaoCalcularFrete() {
@@ -98,8 +91,8 @@ public class PageObjectClassNetShoes extends PageObject {
 		return listaTenisPreco;
 	}
 
-	public WebElement getLinkTenisOutlet() {
-		return linkTenisOutlet;
+	public List<WebElement> getLinksOutlet() {
+		return linksOutlet;
 	}
 
 	public List<WebElement> getListaTamanhoCamisetas() {
