@@ -45,11 +45,12 @@ public class StepBusinessSouBarato {
 	}
 	
 	public void clicarEmComprar(){
-		viewElement.click(page.getBotaComprar());
+		viewElement.click(page.getBotaoComprar());
 	}
 	
 	public void confirmaProdutoReembalado(){
 		viewElement.click(page.getLinkConfirmaCompraReembalado());
+		viewElement.click(page.getBotaoContinuarPaginaGarantia());
 	}
 	
 	public void selecionarQuantidadeProduto(int quantidade){

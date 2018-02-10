@@ -14,4 +14,4 @@ Scenario Outline: Para adicionar um tênis ao carrinho e calcular o frete
 	
 Examples:
 |busca |cor   |tamanho|cep       |
-|Adidas|Preto |39     |06020-000 |
+|Adidas|Azul  |39     |06020-000 |

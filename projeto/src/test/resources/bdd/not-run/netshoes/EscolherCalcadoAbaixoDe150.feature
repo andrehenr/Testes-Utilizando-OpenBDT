@@ -11,5 +11,5 @@ Scenario Outline: Para comecar a busca pelo calçado
 	And clico em Comprar Tenis
 	
 Examples:
-|preco |cor        |tamanho|
-|150   |Cinza+Pink |37     |
+|preco |cor              |tamanho|
+|150   |Preto e Vermelho |37     |

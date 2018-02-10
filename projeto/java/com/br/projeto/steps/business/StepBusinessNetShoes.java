@@ -2,6 +2,7 @@ package com.br.projeto.steps.business;
 
 import java.util.ArrayList;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,9 +126,17 @@ public class StepBusinessNetShoes {
 	public void buscarPorTenis(double preco) {
 		for(int i = 0; i < page.getListaTenisPreco().size(); i++){
 			WebElement element = page.getListaTenisPreco().get(i);
-			String valorModificado = element.getText().replace(",", ".").substring(3,9).replace(" ", "");
-			if(Double.valueOf(valorModificado) < preco){
-				viewElement.click(page.getListaCalcados().get(i));
+			
+			StringBuilder precoTenis = new 
+					StringBuilder(element.findElements(By.tagName("span")).get(2).getAttribute("content"));
+			
+			if(precoTenis.toString().equals("BRL")){
+				precoTenis = new 
+						StringBuilder(element.findElements(By.tagName("span")).get(3).getAttribute("content"));
+			}
+			//LOG.debug(precoTenis);
+			if(Double.valueOf(precoTenis.toString()) < preco){
+				viewElement.navigate(page.getListaTenisPreco().get(i).getAttribute("href"));
 				break;
 			}
 		}
@@ -163,7 +172,7 @@ public class StepBusinessNetShoes {
 	}
 
 	public boolean validarPaginaInicial() {
-		return viewElement.getDriver().getCurrentUrl().equals("http://www.netshoes.com.br/");
+		return viewElement.getDriver().getCurrentUrl().equals("https://www.netshoes.com.br/");
 	}
 	
 }

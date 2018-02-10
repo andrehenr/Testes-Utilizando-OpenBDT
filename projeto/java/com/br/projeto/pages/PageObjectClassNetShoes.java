@@ -57,10 +57,10 @@ public class PageObjectClassNetShoes extends PageObject {
 	@FindBy(id = "column-shipping-calculated")
 	private WebElement informacoesSobreFrete;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[3]/div[1]/div/a")
+	@FindBy(id = "back-to-store")
 	private WebElement linkVoltarParaLoja;
 	
-	@FindBy(xpath = "/html/body/div[3]/div[2]/table/tfoot/tr[5]/td[1]/form/button")
+	@FindBy(linkText = "Limpar Carrinho")
 	private WebElement linkLimparCarrinho;
 	
 	public WebElement getLinkVoltarParaLoja() {

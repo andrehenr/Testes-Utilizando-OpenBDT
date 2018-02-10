@@ -20,7 +20,7 @@ public class PageObjectClassSouBarato extends PageObject {
 	private WebElement linkProdutosReembalados;
 
 	@FindBy(id = "product-buy-button")
-	private WebElement botaComprar;
+	private WebElement botaoComprar;
 
 	@FindBy(linkText = "Sim, continuar")
 	private WebElement linkConfirmaCompraReembalado;
@@ -156,8 +156,8 @@ public class PageObjectClassSouBarato extends PageObject {
 		return linkConfirmaCompraReembalado;
 	}
 
-	public WebElement getBotaComprar() {
-		return botaComprar;
+	public WebElement getBotaoComprar() {
+		return botaoComprar;
 	}
 
 	public List<WebElement> getListaDePordutosReembalados() {

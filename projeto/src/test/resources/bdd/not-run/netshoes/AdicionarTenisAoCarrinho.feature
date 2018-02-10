@@ -11,5 +11,5 @@ Scenario Outline: Para adicionar um tênis ao carrinho
 	Then valido escolha correta "<busca>""<cor>""<tamanho>"
 	
 Examples:
-|busca |cor        |tamanho|
-|Nike  |Azul+Preto |35     |
+|busca |cor           |tamanho|
+|Nike  |Preto e Branco|38     |

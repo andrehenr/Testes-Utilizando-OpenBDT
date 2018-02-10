@@ -16,4 +16,4 @@ Scenario Outline: Para adicionar um produto reembalado ao carrinho
 	
 Examples:
 |busca   |quantidade|cep     |tipo_frete|
-|Smart TV|2         |06020000|1         |
+|Smart TV|1         |06020000|1         |
