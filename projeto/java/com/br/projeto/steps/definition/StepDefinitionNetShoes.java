@@ -95,7 +95,7 @@ public class StepDefinitionNetShoes {
 	
 	@When("^seleciono tamanho \"([^\"]*)\"$")
 	public void selecionarTamanho(String tamanho){
-		stepB.selecionarTamanhoCalcado(tamanho);
+		stepB.selecionarTamanhoTenis(tamanho);
 	}
 	
 	@When("^clico em calcular frete$")

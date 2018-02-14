@@ -47,8 +47,16 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionaPrimeiroHotel() {
-		int tamanhoListaHoteis = page.getResultadoDosHoteis().size();
-		viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1));
+//		int tamanhoListaHoteis = page.getResultadoDosHoteis().size();
+//		Utilizei uma thread, pois não há diferenca entre hoteis de 3 ou 5 estrelas em relação a div em que eles ficam,
+//		assim o viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1)) não espera
+//		carregar os hoteis 5 estrelas pois o elemento que mostra os hoteis de 3 estrelas e o mesmo dos hoteis dos hotéis de 5 
+//		estrelas
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		//Navego para o primeiro hotel cinco estrelas
 		viewElement.navigate(page.getLinkDosHoteis().get(3).getAttribute("href"));
 	}
