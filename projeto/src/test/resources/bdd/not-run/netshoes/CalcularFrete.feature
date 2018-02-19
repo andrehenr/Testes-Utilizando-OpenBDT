@@ -13,5 +13,5 @@ Scenario Outline: Para adicionar um tênis ao carrinho e calcular o frete
 	Then exibo frete para o produto
 	
 Examples:
-|busca |cor   |tamanho|cep       |
-|Adidas|Azul  |39     |06020-000 |
+|busca |cor      |tamanho|cep       |
+|Oakley|Marinho  |39     |06020-000 |

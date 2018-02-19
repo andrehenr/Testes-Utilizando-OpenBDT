@@ -8,4 +8,5 @@ Scenario Outline: Consulta Promocoes em Angra dos Reis
 	
 Examples:
 |local                          |
-|ANGRA DOS REIS/RIO DE JANEIRO  | 
+|ANGRA DOS REIS/RIO DE JANEIRO  |
+|SÃO LOURENÇO/MINAS GERAIS      | 

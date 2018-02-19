@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
-import com.br.projeto.pages.PageObjectCorreio;
+import com.br.projeto.pages.PageObjectClassCorreio;
 
 import io.openbdt.element.WebBrowserScreenElement;
 import jxl.common.Logger;
@@ -15,7 +15,7 @@ import jxl.common.Logger;
 @ContextConfiguration("/appcontext.xml")
 public class StepBusinessCorreios {
 
-	private PageObjectCorreio page;
+	private PageObjectClassCorreio page;
 	private String stringBusca;
 
 	@Autowired

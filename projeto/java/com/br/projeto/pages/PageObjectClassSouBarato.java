@@ -8,12 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassSouBarato extends PageObject {
-
-	                 
-	@FindBy(xpath = "//*[@id='containerpage']/div[2]/div/div/div/section/ul/li/section/div[2]/a")
-	private List<WebElement> listaDePordutosReembalados;
 	
-	@FindBy(xpath = "//*[@id='lightpop']/div/div[2]/a")
+	@FindBy(xpath = "//div[@class='lightpop-close md-btn-visible']/a")
 	private WebElement botaoFechaAbaReceberPromocoes;
 
 	@FindBy(linkText = "Produtos Reembalados")
@@ -21,17 +17,24 @@ public class PageObjectClassSouBarato extends PageObject {
 
 	@FindBy(id = "product-buy-button")
 	private WebElement botaoComprar;
+	
+	@FindBy(xpath = "//ul[@class='list-actions']/li")
+	private List<WebElement> botoesComprarPaginaFrete;
+
+	public List<WebElement> getBotoesComprarPaginaFrete() {
+		return botoesComprarPaginaFrete;
+	}
 
 	@FindBy(linkText = "Sim, continuar")
 	private WebElement linkConfirmaCompraReembalado;
 
-	@FindBy(xpath = "//*[@id='app']/section/header/h2")
+	@FindBy(css = ".page-title")
 	private WebElement TituloMinnhaSacola;
 
-	@FindBy(xpath = "//*[@id='app']/section/article/div[1]/section/article/ul/li/ul/li[2]/ul/li[1]/div/select")
+	@FindBy(xpath = "//select[@class='form-control select__quantity']")
 	private WebElement selectQuantidadeProdutos;
 
-	@FindBy(xpath = "//*[@id='app']/section/article/div[2]/div[1]/div/ul/li")
+	@FindBy(xpath = "//li[@class='radio-bordered animate-item-blind']")
 	private List<WebElement> tipodeFrete;
 
 	@FindBy(id = "cep")
@@ -43,13 +46,10 @@ public class PageObjectClassSouBarato extends PageObject {
 	@FindBy(css = ".warranty-button")
 	private WebElement botaoContinuarPaginaGarantia;
 
-	@FindBy(xpath = "//*[@id='app']/section/div[3]/div/div[2]/ul/li/a")
-	private WebElement botaoComprarPaginaFrete;
-
-	@FindBy(xpath = "//*[@id='root']/div/div[2]/h2/span")
+	@FindBy(className = "entrar-title")
 	private WebElement tituloLogin;
 
-	@FindBy(xpath = "//*[@id='app']/section/article/div[2]/div[1]/div/ul/li")
+	@FindBy(xpath = "//li[@class='radio-bordered animate-item-blind']")
 	private List<WebElement> opcoesFrete;
 
 	@FindBy(id = "main-header-menu-toggle")
@@ -61,14 +61,8 @@ public class PageObjectClassSouBarato extends PageObject {
 	@FindBy(linkText = "Geladeiras e Freezeres")
 	private WebElement opcaoGeladeirasFreezeres;
 
-	@FindBy(xpath = "//*[@id='containerpage']/div[5]/div/div/div[2]/section/ul/li/section/div[2]/a")
-	private List<WebElement> listaDeGeladeirasFreezeres;
-
 	@FindBy(xpath = "//*[@id='skusbox']/div/button")
 	private List<WebElement> opcoesTensao;
-
-	@FindBy(xpath = "//*[@id='containerpage']/div[1]/div/div[2]/section/ul/li/section/div[2]/a")
-	private List<WebElement> listaProdutosPosPesquisa;
 
 	@FindBy(id = "header-search-input")
 	private WebElement campoBusca;
@@ -76,7 +70,7 @@ public class PageObjectClassSouBarato extends PageObject {
 	@FindBy(linkText = "VANTAGENS")
 	private WebElement abaVantagens;
 
-	@FindBy(xpath = "//*[@id='area01']/div[1]/div/div/div[1]/ul/li[2]/ul/li[1]/a")
+	@FindBy(linkText="Conheça as vantagens")
 	private WebElement linkConhecaVantagens;
 
 	@FindBy(id = "vantagens-cartoes")
@@ -87,6 +81,9 @@ public class PageObjectClassSouBarato extends PageObject {
 	
 	@FindBy(linkText = "Produtos Usados")
 	private WebElement linkPordutosUsados;
+
+	@FindBy(xpath = "//section[@class='p-card']")
+	private List<WebElement> listaProdutos;
 
 	public WebElement getBotaoFechaAbaReceberPromocoes() {
 		return botaoFechaAbaReceberPromocoes;
@@ -108,10 +105,6 @@ public class PageObjectClassSouBarato extends PageObject {
 		return opcaoEletrodomesticos;
 	}
 
-	public List<WebElement> getListaProdutosPosPesquisa() {
-		return listaProdutosPosPesquisa;
-	}
-
 	public WebElement getCampoBusca() {
 		return campoBusca;
 	}
@@ -122,10 +115,6 @@ public class PageObjectClassSouBarato extends PageObject {
 
 	public WebElement getTituloLogin() {
 		return tituloLogin;
-	}
-
-	public WebElement getBotaoComprarPaginaFrete() {
-		return botaoComprarPaginaFrete;
 	}
 
 	public WebElement getBotaoContinuarPaginaGarantia() {
@@ -160,10 +149,6 @@ public class PageObjectClassSouBarato extends PageObject {
 		return botaoComprar;
 	}
 
-	public List<WebElement> getListaDePordutosReembalados() {
-		return listaDePordutosReembalados;
-	}
-
 	public WebElement getLinkProdutosReembalados() {
 		return linkProdutosReembalados;
 	}
@@ -180,10 +165,6 @@ public class PageObjectClassSouBarato extends PageObject {
 		return this.opcaoGeladeirasFreezeres;
 	}
 
-	public List<WebElement> getListaDeGeladeirasFreezeres() {
-		return this.listaDeGeladeirasFreezeres;
-	}
-
 	public List<WebElement> getOpcoesTensao() {
 		return this.opcoesTensao;
 	}
@@ -194,5 +175,9 @@ public class PageObjectClassSouBarato extends PageObject {
 
 	public WebElement getLinkLimite() {
 		return linkLimite;
+	}
+
+	public List<WebElement> getListaDeProdutos() {
+		return this.listaProdutos;
 	}
 }

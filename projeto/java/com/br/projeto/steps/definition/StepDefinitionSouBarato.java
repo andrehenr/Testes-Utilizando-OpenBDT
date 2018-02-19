@@ -62,11 +62,6 @@ public class StepDefinitionSouBarato {
 	    stepB.selecionarTipoFrete(tipoFrete);
 	}
 	
-	@When("^clico em Comprar$")
-	public void clicoComprar(){
-		stepB.clicarEmComprarPaginaFrete();
-	}
-	
 	@Then("^valido pagina de identificacao$")
 	public void validoPaginaIdentificacao(){
 		Assert.assertTrue(stepB.validarPaginaLogin());
@@ -125,6 +120,11 @@ public class StepDefinitionSouBarato {
 	@When("^clico no link de Produtos Usados$")
 	public void clicoLinkProdutosUsados(){
 	    stepB.clicarEmLinkProdutosUsados();
+	}
+	
+	@When("^clico em Comprar$")
+	public void clico_em_Comprar() {
+		stepB.clicarEmComprarAntesPaginaLogin();
 	}
 
 	@Then("^exibo frete$")

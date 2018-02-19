@@ -1,5 +1,8 @@
 package com.br.projeto.steps.business;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +39,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void selecionarProdutoPorPalavra(String busca) {
-		for(WebElement elemento: page.getListaDePordutosReembalados()){
+		for(WebElement elemento: page.getListaDeProdutos()){
 			if(elemento.getText().contains(busca)){
 				viewElement.click(elemento);
 				break;
@@ -75,11 +78,7 @@ public class StepBusinessSouBarato {
 		viewElement.waitForElementIsPresent(30, page.getOpcoesFrete().get(2));
 		viewElement.click(page.getOpcoesFrete().get(tipoFrete - 1));
 	}
-
-	public void clicarEmComprarPaginaFrete() {
-		viewElement.click(page.getBotaoComprarPaginaFrete());
-	}
-
+	
 	public boolean validarPaginaLogin() {
 		return viewElement.getText(page.getTituloLogin()).equals("Identificação");
 	}
@@ -97,7 +96,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void selecionarGeladeiraMarca(String marca) {
-		for(WebElement elemento: page.getListaDeGeladeirasFreezeres()){
+		for(WebElement elemento: page.getListaDeProdutos()){
 			if(elemento.getText().contains(marca)){
 				viewElement.click(elemento);
 				break;
@@ -111,7 +110,7 @@ public class StepBusinessSouBarato {
 	}
 
 	public void selecionarPrimeiroProdutoDaBusca() {
-		viewElement.click(page.getListaProdutosPosPesquisa().get(0));
+		viewElement.click(page.getListaDeProdutos().get(0));
 	}
 
 	public void passarMouseSobreVantagens() {
@@ -140,6 +139,10 @@ public class StepBusinessSouBarato {
 		for(WebElement elemento : page.getOpcoesFrete()){
 			LOG.info(elemento.getText());
 		}
+	}
+
+	public void clicarEmComprarAntesPaginaLogin() {
+		viewElement.waitAndClick(page.getBotoesComprarPaginaFrete().get(1),30);
 	}
 
 }

@@ -93,18 +93,28 @@ public class StepBusinessHotelUrbano {
 	}
 
 	public void selecionarQuantidadeAdultos(int quantidadeAdultos) {
-		viewElement.click(page.getCamposPassagem().get(0));
-		viewElement.click(page.getQuantidadePassagensDozeMais().get(quantidadeAdultos - 1));
+		viewElement.click(page.getBotaoPassagem12Mais());
+		viewElement.click(viewElement.findElements(By.xpath("//a[@data-value='"+quantidadeAdultos+"']")).get(0));
 	}
 
 	public void selecionarQuantidadeCriancas(int quantidadeCriancas) {
-		viewElement.click(page.getCamposPassagem().get(1));
-		viewElement.click(page.getQuantidadePassagensDozeMenos().get(quantidadeCriancas));
+		viewElement.click(page.getBotaoPassagemCriancas());
+		if(quantidadeCriancas == 0){
+			viewElement.click(viewElement.findElements(By.xpath("//a[@data-value='0']")).get(0));
+		}
+		else{
+			viewElement.click(viewElement.findElements(By.xpath("//a[@data-value='"+quantidadeCriancas+"']")).get(1));
+		}
 	}
 
 	public void selecionarQuantidadeBebes(int quantidadeBebes) {
-		viewElement.click(page.getCamposPassagem().get(2));
-		viewElement.click(page.getQuantidadePassagensBebes().get(quantidadeBebes));
+		viewElement.click(page.getBotaoPassagemBebes());
+		if(quantidadeBebes == 0){
+			viewElement.click(viewElement.findElements(By.xpath("//a[@data-value='0']")).get(1));
+		}
+		else{
+			viewElement.click(viewElement.findElements(By.xpath("//a[@data-value='"+quantidadeBebes+"']")).get(2));
+		}
 	}
 
 	public void clicarNoBotaoPesquisarVoo() {
@@ -157,11 +167,19 @@ public class StepBusinessHotelUrbano {
 				break;
 			}
 		}
-		LOG.info((existePromocao? "Há":"Não há")+" promoções para Angra dos Reis");
+		LOG.info((existePromocao? "Há":"Não há")+" promoções para "+local);
 	}
 
 	public void selecionarHotelPeloNome(String nomeHotel) {
-		viewElement.waitForElementIsPresent(20, page.getNomesDosHoteis().get(0));
+//		Utilizei uma thread, pois não há diferenca entre hoteis de 3 ou 5 estrelas em relação a div em que eles ficam,
+//		assim o viewElement.waitForElementIsPresent(60, page.getResultadoDosHoteis().get(tamanhoListaHoteis - 1)) não espera
+//		carregar os hoteis 5 estrelas pois o elemento que mostra os hoteis de 3 estrelas e o mesmo dos hoteis dos hotéis de 5 
+//		estrelas
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		boolean achou = false;
 		for (int i = 0; i < page.getNomesDosHoteis().size(); i++) {
 			if (page.getNomesDosHoteis().get(i).getText().contains(nomeHotel)) {

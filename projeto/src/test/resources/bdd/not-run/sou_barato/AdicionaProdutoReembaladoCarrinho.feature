@@ -15,5 +15,5 @@ Scenario Outline: Para adicionar um produto reembalado ao carrinho
 	Then valido pagina de identificacao
 	
 Examples:
-|busca   |quantidade|cep     |tipo_frete|
-|Smart TV|1         |06020000|1         |
+|busca    |quantidade|cep     |tipo_frete|
+|Galaxy A5|1         |06020000|1         |

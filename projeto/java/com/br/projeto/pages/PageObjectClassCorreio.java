@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import net.serenitybdd.core.pages.PageObject;
 
-public class PageObjectCorreio extends PageObject {
+public class PageObjectClassCorreio extends PageObject {
 
 	@FindBy(id = "acesso-busca")
 	private WebElement campoBuscaCEPEnderecoPaginaIncial;
@@ -16,15 +16,16 @@ public class PageObjectCorreio extends PageObject {
 	@FindBy(xpath = "//*[@id='busca-acesso-rapido']/form/input[2]")
 	private WebElement botaoBuscaCEPEnderecoPaginaInicial;
 
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/p")
+	@FindBy(xpath = "//div[@class='ctrlcontent']/p")
 	private WebElement mensagemDeBusca;
 
 	private By linhaDeResultadoDaBusca = By
-			.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr");
+			.xpath("//table/tbody/tr");
+	
 	private By linkProximosResultados = By.linkText("[ Próxima ]");
 
 	private By divContemLinkProximo = By.cssSelector(
-			"body > div.back > div.tabs > div:nth-child(2) > div > div > div.column2 > div.content > div.ctrlcontent > div:nth-child(4)");
+			"div.ctrlcontent > div:nth-child(4)");
 
 	@FindBy(css = "#content-precos-prazos > div.select-precos-prazos")
 	private WebElement campoAbreMenuSuspenso;
@@ -71,13 +72,13 @@ public class PageObjectCorreio extends PageObject {
 	@FindBy(name = "valorDeclarado")
 	private WebElement campoValorDeclarado;
 	
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tbody/tr[2]/td")
+	@FindBy(xpath = "//tr[@class='destaque' and position() = 2]/td")
 	private WebElement campoResultadoPrazo;
 	
-	@FindBy(xpath = "/html/body/div[1]/div[3]/div[2]/div/div/div[2]/div[2]/div[2]/table/tfoot/tr/td")
+	@FindBy(xpath = "//tr[@class='destaque' and position() = 1]/td")
 	private WebElement campoResultadoPreco;
 	
-	@FindBy(css = "#content-principais-servicos > ul > li:nth-child(4) > a > img")
+	@FindBy(xpath = "//img[@alt='Rede de Atendimento']")
 	private WebElement linkRedeAtendimento;
 	
 	@FindBy(name = "estadoAgencia")

@@ -10,112 +10,108 @@ import net.serenitybdd.core.pages.PageObject;
 
 public class PageObjectClassHotelUrbano extends PageObject {
 
-	@FindBy(xpath = "//*[@id='reactRoot']/div/div[1]/div/div[1]/div[1]/header/div/div[2]/nav/a[2]")
+	@FindBy(xpath = "//a[@title='Reserva de Hotéis']")
 	private WebElement linkHoteis;
 
 	@FindBy(name = "q")
 	private WebElement caixaPesquisaHoteis;
 
-	@FindBy(xpath = "//*[@id='get-intent-midia']/div/form/div[2]/div[2]/button")
+	@FindBy(tagName = "button")
 	private WebElement botaoPesquisarHoteis;
 
-	@FindBy(xpath = "//*[@id='filters']/aside/div[2]/div[2]/div[2]/label[1]")
+	@FindBy(xpath = "//label[@for='filter_stars_5|1']")
 	private WebElement checkBoxHoteisCincoEstrelas;
-	
-	@FindBy(xpath = "//*[@id='result-card']/div/div/div[2]/div[2]/div[1]/div/h3/a")
+
+	@FindBy(xpath = "//h3[@class='component-card_title_h']/a")
 	private List<WebElement> linkDosHoteis;
 
 	@FindBy(xpath = "//*[@id='result-card']/div")
 	private List<WebElement> resultadoDosHoteis;
-	
-	@FindBy(xpath = "//*[@id='wrap-page-head']/div[1]/span/i")
+
+	@FindBy(className = "icon-star")
 	private List<WebElement> iconesEstrelas;
-	
-	@FindBy(xpath = "//*[@id='wrap-page-head']/div[1]/h1/span")
+
+	@FindBy(className = "page-title-text")
 	private WebElement nomeHotel;
-	
-	@FindBy(xpath = "//*[@id='reactRoot']/div/div[1]/div/div[1]/div[1]/header/div/div[2]/nav/a[6]")
+
+	@FindBy(xpath = "//a[@title='Passagens Aéreas']")
 	private WebElement linkAereos;
-	
-	@FindBy(xpath = "//*[@id='search']/div[1]/div[4]/div/div/div/input")
+
+	@FindBy(xpath = "//input[@placeholder='Cidade ou aeroporto de destino']")
 	private WebElement campoDestinoVoo;
-	
-	@FindBy(xpath = "//*[@id='search-date-depart']/div[1]/button")
+
+	@FindBy(xpath = "//button[@data-label='Ida']")
 	private WebElement campoDataIda;
-	
-	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[3]")
+
+	@FindBy(xpath = "//div[@aria-controls='date-depart_table' and @title='Próximo mês']")
 	private WebElement botaoProximoMesVoo;
-	
-	@FindBy(xpath = "//*[@id='date-depart_root']/div/div/div/div/div[2]/div[1]/div/button/div/span")
+
+	@FindBy(className = "dropdown-accent")
 	private WebElement mesSelecionadoIda;
-	
+
 	@FindBy(xpath = "//*[@id='ui-datepicker-div']/div/a[2]")
 	private WebElement botaoProximoMes;
-	
-	@FindBy(xpath = "//*[@id='date-depart_table']/tbody/tr/td/div")
+
+	@FindBy(xpath = "//*[@id='date-depart_table']/tbody/tr/td")
 	private List<WebElement> diasDoCalendarioEmExibicao;
-	
-	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[1]/div/div/ul/li/a")
-	private List<WebElement> quantidadePassagensDozeMais;
-	
-	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[2]/div/div/ul/li/a")
-	private List<WebElement> quantidadePassagensDozeMenos;
-	
-	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div[4]/div/div/ul/li/a")
-	private List<WebElement> quantidadePassagensBebes;
-	
+
 	@FindBy(xpath = "//*[@id='search']/a")
 	private WebElement botaoPesquisarVoos;
-	
-	@FindBy(xpath = "//*[@id='search']/div[1]/div[4]/div/div/a")
+
+	@FindBy(linkText = "Cidade ou aeroporto de destino")
 	private WebElement linkCampoDestino;
+
+	@FindBy(xpath = "//button[@aria-label='Número de passageiros com mais de 12 anos']")
+	private WebElement botaoPassagem12Mais;
 	
-	@FindBy(xpath = "//*[@id='people-and-class']/div[2]/div/div")
-	private List<WebElement> camposPassagem;
+	@FindBy(xpath = "//button[@aria-label='Número de passageiros com menos de 12 anos']")
+	private WebElement botaoPassagemCriancas;
 	
+	@FindBy(xpath = "//button[@aria-label='Número de passageiros com menos de 2 anos']")
+	private WebElement botaoPassagemBebes;
+
 	@FindBy(css = ".results-count")
 	private WebElement totalResultadosVoo;
-	
-	@FindBy(xpath = "//*[@id='hu-hotels-autocomplete-field']/div/ul/li[4]")
+
+	@FindBy(xpath = "//*[@data-event-value='Ingresso Thermas dos Laranjais']")
 	private WebElement linkIngresso;
-	
-	@FindBy(xpath = "//*[@id='offer-options']/div[2]/div[2]/div[2]/div/div[4]/div[2]/div[4]/a")
+
+	@FindBy(className = "mapx-produto-pacotes-click-oferta_btn_comprar_1")
 	private WebElement botaoComprar;
-	
-	@FindBy(xpath = "//*[@id='offer-options']/div[1]/div/div/select")
+
+	@FindBy(tagName = "select")
 	private WebElement selectQuantidadePessoasParque;
-	
-	@FindBy(xpath = "//*[@id='reactRoot']/div/div[1]/div/div[1]/div[1]/header/div/div[2]/nav/a[4]")
+
+	@FindBy(xpath = "//a[@title='Promoções de Viagens']")
 	private WebElement linkPromocoes;
-	
-	@FindBy(xpath = "//*[@id='reactRoot']/div/div[3]/div[2]/div/div[4]/div/div[2]/div/a/div[2]/div[1]/strong")
+
+	@FindBy(xpath = "//div[@data-event-category='Coleção_Produtos_2']")
 	private List<WebElement> locaisRegiaoSudestePromocao;
-	
-	@FindBy(xpath = "//*[@id=\"result-card\"]/div/div/div[2]/div[2]/div[1]/div/h3/a")
+
+	@FindBy(xpath = "//h3[@class='component-card_title_h']/a")
 	private List<WebElement> nomesDosHoteis;
-	
-	@FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr/td/a")
+
+	@FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr/td")
 	private List<WebElement> diasDiponiveisParaReservaEntrada;
-	
-	
+
 	private By campoDataDeEntrada = By.name("checkin");
-	
-	@FindBy(xpath = "//*[@id='ui-datepicker-div']/div/div/span[1]")
+
+	@FindBy(className = "ui-datepicker-month")
 	private WebElement mesSelecionadoEntrada;
-	
+
 	@FindBy(name = "sku_quantity[]")
 	private List<WebElement> selectNumeroDeQuartos;
-	
+
 	@FindBy(name = "adults")
 	private List<WebElement> selectNumeroAdultos;
-	
+
 	@FindBy(name = "children")
 	private List<WebElement> selectNumeroCriancas;
-	
-	@FindBy(xpath = "//*[@id=\"wrap-booking-info\"]/div/div[2]/div/input")
+
+	@FindBy(xpath = "//input[@value='Reservar']")
 	private WebElement botaoReservar;
-	
-	@FindBy(xpath = "//*[@id='ui-datepicker-div']/div/a[2]")
+
+	@FindBy(xpath = "//a[@title='Próximo']")
 	private WebElement linkProximoMes;
 
 	public List<WebElement> getLinkDosHoteis() {
@@ -185,11 +181,7 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	public WebElement getTotalResultadosVoo() {
 		return totalResultadosVoo;
 	}
-
-	public List<WebElement> getCamposPassagem() {
-		return camposPassagem;
-	}
-
+	
 	public WebElement getLinkCampoDestino() {
 		return linkCampoDestino;
 	}
@@ -222,23 +214,11 @@ public class PageObjectClassHotelUrbano extends PageObject {
 		return diasDoCalendarioEmExibicao;
 	}
 
-	public List<WebElement> getQuantidadePassagensDozeMais() {
-		return quantidadePassagensDozeMais;
-	}
-
-	public List<WebElement> getQuantidadePassagensDozeMenos() {
-		return quantidadePassagensDozeMenos;
-	}
-
-	public List<WebElement> getQuantidadePassagensBebes() {
-		return quantidadePassagensBebes;
-	}
-
 	public WebElement getNomeHotel() {
 		return nomeHotel;
 	}
-	
-	public List<WebElement> getIconesEstrelas(){
+
+	public List<WebElement> getIconesEstrelas() {
 		return iconesEstrelas;
 	}
 
@@ -264,5 +244,17 @@ public class PageObjectClassHotelUrbano extends PageObject {
 
 	public WebElement getLinkPromocoes() {
 		return linkPromocoes;
+	}
+
+	public WebElement getBotaoPassagem12Mais() {
+		return botaoPassagem12Mais;
+	}
+
+	public WebElement getBotaoPassagemCriancas() {
+		return botaoPassagemCriancas;
+	}
+
+	public WebElement getBotaoPassagemBebes() {
+		return botaoPassagemBebes;
 	}
 }

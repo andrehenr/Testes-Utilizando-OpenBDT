@@ -12,22 +12,22 @@ public class PageObjectClassNetShoes extends PageObject {
 	@FindBy(linkText = "CALÇADOS")
 	private WebElement linkCalcados;
 
-	@FindBy(xpath = "//*[@id='item-list']/div[1]/div")
+	@FindBy(xpath = "//div[@itemprop='itemListElement']")
 	private List<WebElement> listaCalcados;
 
-	@FindBy(xpath = "//*[@id='buy-box']/section[1]/div/ul/li/a")
+	@FindBy(xpath = "//ul[@data-type='color']/li/a")
 	private List<WebElement> listaCoresCalcados;
 
-	@FindBy(xpath = "//*[@id='buy-box']/section[2]/div/ul/li/a")
+	@FindBy(xpath = "//ul[@data-type='size']/li/a")
 	private List<WebElement> listaTamanhoCalcados;
 
 	@FindBy(id = "buy-button-now")
 	private WebElement botaoComprar;
 
-	@FindBy(xpath = "//*[@id='content']/section/div/section/table/tbody/tr/td[1]/div[2]/div[3]/ul/li")
+	@FindBy(xpath = "//ul[@class='attributes']/li")
 	private List<WebElement> listaAtributosPreCompra;
 
-	@FindBy(xpath = "//*[@id='content']/section/div/section/table/tbody/tr/td[1]/div[2]/strong")
+	@FindBy(xpath = "//strong[@class = 'product-name name']")
 	private WebElement nomeProduto;
 
 	@FindBy(id = "search-input")
@@ -36,16 +36,16 @@ public class PageObjectClassNetShoes extends PageObject {
 	@FindBy(xpath = "//*[@id='item-list']/div/div")
 	private List<WebElement> listaCamisetas;
 
-	@FindBy(xpath = "//*[@id='buy-box']/section[2]/div/ul/li")
+	@FindBy(xpath = "//ul[@data-type='size']/li")
 	private List<WebElement> listaTamanhoCamisetas;
 
-	@FindBy(xpath = "//*[@id='involucro']/section[2]/ul/li")
+	@FindBy(className = "categoria-link-p")
 	private List<WebElement> linksOutlet;
 
-	@FindBy(xpath = "//*[@id='item-list']/div[1]/div/div[2]/a")
+	@FindBy(xpath = "//a[@itemprop='offers']")
 	private List<WebElement> listaTenisPreco;
 
-	@FindBy(xpath = "/html/body/div[3]/div[2]/div[2]/div[3]/div/form/div[4]/ul/li/label/span")
+	@FindBy(className = "product-item")
 	private List<WebElement> listaTamanhoTenis;
 
 	@FindBy(name = "shipping[zipCode]")
