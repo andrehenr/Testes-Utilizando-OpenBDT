@@ -1,5 +1,6 @@
 package com.br.projeto.steps.business;
 
+import java.util.Calendar;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -53,7 +54,7 @@ public class StepBusinessHotelUrbano {
 //		carregar os hoteis 5 estrelas pois o elemento que mostra os hoteis de 3 estrelas e o mesmo dos hoteis dos hotéis de 5 
 //		estrelas
 		try {
-			Thread.sleep(20000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -192,13 +193,15 @@ public class StepBusinessHotelUrbano {
 		}
 	}
 
-	public void selecionaDataEntrada(String dataEntrada) {
+	public void selecionaDataEntrada() {
 		viewElement.click(viewElement.findElements(page.getCampoDataDeEntrada()).get(2));
+		String dataEntrada = (Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 2) + " de Fevereiro";
 		selecionarDataNoDatePicker(dataEntrada, page.getMesSelecionadoEntrada(),page.getBotaoProximoMes(),
 				page.getDiasDiponiveisParaReservaEntrada(),35);
 	}
 
-	public void selecionaDataSaida(String dataSaida) {
+	public void selecionaDataSaida() {
+		String dataSaida = (Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + 4) + " de Fevereiro";
 		selecionarDataNoDatePicker(dataSaida, page.getMesSelecionadoEntrada(),page.getBotaoProximoMes(),
 				page.getDiasDiponiveisParaReservaEntrada(),35);
 	}

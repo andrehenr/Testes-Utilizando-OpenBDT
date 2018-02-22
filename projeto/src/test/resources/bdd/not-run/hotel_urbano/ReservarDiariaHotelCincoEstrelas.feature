@@ -10,12 +10,12 @@ Scenario Outline: Pesquisa no Hotel Urbano por um hotel cinco estrelas e fazer u
 	And seleciono hotel "<hotel>"
 	And verifico as cinco estrelas
 	And seleciono numero de adultos "<adultos>"
-	And seleciono data de Entrada "<entrada>"
-	And seleciono data Saida "<saida>"
+	And seleciono data de Entrada
+	And seleciono data Saida
 	And seleciono numero de quartos "<quartos>"
 	And clico em Reservar
 	
 
 Examples:
-|cidade    |hotel 					|entrada 		   |saida          |quartos   |adultos|criancas|
-|São Paulo |Radisson Vila Olímpia   |19 de Fevereiro   |20 de Fevereiro|1         |2      |0       |
+|cidade    |hotel 					|quartos   |adultos|criancas|
+|São Paulo |Radisson Vila Olímpia   |1         |2      |0       |

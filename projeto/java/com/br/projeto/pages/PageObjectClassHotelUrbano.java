@@ -91,7 +91,7 @@ public class PageObjectClassHotelUrbano extends PageObject {
 	@FindBy(xpath = "//h3[@class='component-card_title_h']/a")
 	private List<WebElement> nomesDosHoteis;
 
-	@FindBy(xpath = "//*[@id='ui-datepicker-div']/table/tbody/tr/td")
+	@FindBy(tagName = "td")
 	private List<WebElement> diasDiponiveisParaReservaEntrada;
 
 	private By campoDataDeEntrada = By.name("checkin");

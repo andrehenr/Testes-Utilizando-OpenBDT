@@ -20,7 +20,7 @@ public class PageObjectClassCorreio extends PageObject {
 	private WebElement mensagemDeBusca;
 
 	private By linhaDeResultadoDaBusca = By
-			.xpath("//table/tbody/tr");
+			.tagName("tr");
 	
 	private By linkProximosResultados = By.linkText("[ Próxima ]");
 

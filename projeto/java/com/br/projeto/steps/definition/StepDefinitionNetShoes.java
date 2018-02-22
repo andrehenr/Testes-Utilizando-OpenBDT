@@ -80,7 +80,7 @@ public class StepDefinitionNetShoes {
 	
 	@When("^busco por outlet na caixa de busca$")
 	public void buscoPorOutletCaixaBusca(){
-	    stepB.preencherCaixaBusca("Outlet");
+	    stepB.preencherCaixaBusca("Ofertas");
 	}
 
 	@When("^clico no link de Tenis na secao Outlet$")

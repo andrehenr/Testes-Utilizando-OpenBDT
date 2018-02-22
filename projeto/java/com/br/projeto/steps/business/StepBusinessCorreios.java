@@ -32,10 +32,10 @@ public class StepBusinessCorreios {
 	}
 
 	public void mudaDePagina(WebElement elementoEsperado) {
-		for (String windows : viewElement.getDriver().getWindowHandles()) {
-			viewElement.getDriver().switchTo().window(windows);
-		}
-		if(elementoEsperado != null) viewElement.waitForElementIsPresent(30, elementoEsperado);
+		viewElement.getDriver().getWindowHandles()
+				.forEach(windows -> viewElement.getDriver().switchTo().window(windows));
+		if (elementoEsperado != null)
+			viewElement.waitForElementIsPresent(30, elementoEsperado);
 	}
 
 	public void abreSiteCorreios() {
@@ -125,9 +125,8 @@ public class StepBusinessCorreios {
 		for (int i = 0; i < Integer.valueOf(tipoEmbalagem) - 1; i++) {
 			viewElement.click(page.getProximaEmbalagem());
 		}
-		viewElement.waitAndClick(
-				viewElement.findElement(By.cssSelector("#spanTipoEmbalagem > div > div.window > div > div:nth-child("
-						+ Integer.valueOf(tipoEmbalagem) + ") > div > p > button")),20);
+		viewElement.waitAndClick(viewElement.findElements(By.xpath("//button[@class='toggle-check']"))
+				.get(Integer.valueOf(tipoEmbalagem) - 1), 20);
 	}
 
 	public void selecionarPesoEnvio(String peso) {
@@ -135,11 +134,11 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarMaoPropria(String maoPropria) {
-		this.selecionarCheckBox(page.getCheckMaoPropria(),maoPropria);
+		this.selecionarCheckBox(page.getCheckMaoPropria(), maoPropria);
 	}
 
 	private boolean selecionarCheckBox(WebElement checkBox, String stringBooleana) {
-		if(stringBooleana.equals("true")) { 
+		if (stringBooleana.equals("true")) {
 			viewElement.click(checkBox);
 			return true;
 		}
@@ -151,18 +150,19 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarDeclaracaoValor(String stringBooleana, String valor) {
-		if(this.selecionarCheckBox(page.getCheckDeclaracaoValor(), stringBooleana)) {
+		if (this.selecionarCheckBox(page.getCheckDeclaracaoValor(), stringBooleana)) {
 			viewElement.sendText(page.getCampoValorDeclarado(), valor);
 		}
 	}
-	
+
 	public void clicarEmEnviar() {
 		viewElement.click(page.getBotaoCalcular());
 		this.mudaDePagina(null);
 	}
 
 	public void exibirPrecoPrazo() {
-		LOG.info("Prazo: "+viewElement.getText(page.getCampoResultadoPrazo())+"\nPreço: "+viewElement.getText(page.getCampoResultadoPreco()));
+		LOG.info("Prazo: " + viewElement.getText(page.getCampoResultadoPrazo()) + "\nPreço: "
+				+ viewElement.getText(page.getCampoResultadoPreco()));
 	}
 
 	public void clicarEmRedeDeAtendimento() {
@@ -170,7 +170,7 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarTipoBusca() {
-		if(!page.getRadioTipoBusca().get(1).isSelected()) {
+		if (!page.getRadioTipoBusca().get(1).isSelected()) {
 			viewElement.click(page.getRadioTipoBusca().get(1));
 		}
 	}
@@ -180,7 +180,7 @@ public class StepBusinessCorreios {
 	}
 
 	public void selecionarMunicipioAgencia(String municipio) {
-		viewElement.selectByVisibleText(page.getSelectMunicipioAgencia(),municipio);
+		viewElement.selectByVisibleText(page.getSelectMunicipioAgencia(), municipio);
 	}
 
 	public void selecionarBairroAgencia(String bairro) {
@@ -190,13 +190,14 @@ public class StepBusinessCorreios {
 
 	public void exibirAgencias() {
 		int agencia = 1;
-		for(WebElement w: page.getNomesDasAgencias()) {
-			LOG.info("\nAgência: "+w.getText());
+		for (WebElement w : page.getNomesDasAgencias()) {
+			LOG.info("\nAgência: " + w.getText());
 			w.findElement(By.tagName("a")).click();
-			List<WebElement> dadosAgencia = viewElement.findElements(By.xpath("//*[@id='detalheAgencia"+agencia+"']/tbody/tr"));
+			List<WebElement> dadosAgencia = viewElement
+					.findElements(By.xpath("//*[@id='detalheAgencia" + agencia + "']/tbody/tr"));
 			LOG.info("Dados Agência:");
 			int i = 0;
-			while(!dadosAgencia.get(i).getText().contains("Dados") && i < dadosAgencia.size()) {
+			while (!dadosAgencia.get(i).getText().contains("Dados") && i < dadosAgencia.size()) {
 				LOG.info(dadosAgencia.get(i).getText());
 				i++;
 			}

@@ -11,5 +11,5 @@ Scenario Outline: Para adicionar uma camiseta da seleção ao carrinho
 	
 	
 Examples:
-|palavra|camiseta |
-|Neymar |GG       |
+|palavra  |camiseta |
+|Infantil |GG       |

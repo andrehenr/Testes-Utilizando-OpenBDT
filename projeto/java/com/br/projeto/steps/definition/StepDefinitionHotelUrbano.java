@@ -142,14 +142,14 @@ public class StepDefinitionHotelUrbano {
 	public void selecionoHotel(String nomeHotel){
 	    stepB.selecionarHotelPeloNome(nomeHotel);
 	}
-	@When("^seleciono data de Entrada \"([^\"]*)\"$")
-	public void selecionoDataEntrada(String dataEntrada) {
-	    stepB.selecionaDataEntrada(dataEntrada);
+	@When("^seleciono data de Entrada$")
+	public void selecionoDataEntrada() {
+	    stepB.selecionaDataEntrada();
 	}
 
-	@When("^seleciono data Saida \"([^\"]*)\"$")
-	public void selecionoDataSaida(String dataSaida){
-	    stepB.selecionaDataSaida(dataSaida);
+	@When("^seleciono data Saida$")
+	public void selecionoDataSaida(){
+	    stepB.selecionaDataSaida();
 	}
 	
 	@When("^seleciono numero de quartos \"([^\"]*)\"$")
