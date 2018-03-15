@@ -1,1 +1,8 @@
 language: java
+os:linux
+
+before_install:
+   - cd projeto
+
+
+  
