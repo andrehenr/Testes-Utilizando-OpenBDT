@@ -3,8 +3,6 @@ os: linux
 
 before_install:
    - cd projeto
-   
-script:
    - mvn verify
 
 
