@@ -1,5 +1,5 @@
 language: java
-os:linux
+os: linux
 
 before_install:
    - cd projeto
