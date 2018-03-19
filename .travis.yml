@@ -2,7 +2,9 @@ language: java
 os: linux
 
 before_install:
-   - cd projeto
+   - cd projeto/archetype
+   - mvn install
+   - cd ..
    - mvn verify
 
 
