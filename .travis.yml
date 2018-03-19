@@ -6,6 +6,7 @@ before_install:
    - cd frameworkOpenBDT
    - mvn install
    - cd ..
+   - cd projeto
    - mvn verify
 
 
