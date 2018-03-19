@@ -2,7 +2,8 @@ language: java
 os: linux
 
 before_install:
-   - cd projeto/archetype
+   - git clone https://github.com/andrehenr/frameworkOpenBDT.git
+   - cd frameworkOpenBDT
    - mvn install
    - cd ..
    - mvn verify
