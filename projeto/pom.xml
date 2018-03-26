@@ -122,6 +122,15 @@
 			<version>3.0.1</version>
 			<type>maven-plugin</type>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.sonarsource.java/sonar-java-plugin -->
+		<dependency>
+			<groupId>org.sonarsource.java</groupId>
+			<artifactId>sonar-java-plugin</artifactId>
+			<version>4.2</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 	</dependencies>
 

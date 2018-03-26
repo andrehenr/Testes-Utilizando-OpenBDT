@@ -65,7 +65,7 @@ public class StepBusinessSouBarato {
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			LOG.error(e.getStackTrace().toString());
 		}
 	}
 	

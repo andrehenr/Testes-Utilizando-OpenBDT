@@ -56,7 +56,7 @@ public class StepBusinessHotelUrbano {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			LOG.error(e.getMessage().toString());
 		}
 		//Navego para o primeiro hotel cinco estrelas
 		viewElement.navigate(page.getLinkDosHoteis().get(3).getAttribute("href"));
@@ -179,7 +179,7 @@ public class StepBusinessHotelUrbano {
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			LOG.error(e.getMessage().toString());
 		}
 		boolean achou = false;
 		for (int i = 0; i < page.getNomesDosHoteis().size(); i++) {
