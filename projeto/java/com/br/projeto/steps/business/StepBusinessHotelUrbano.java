@@ -56,6 +56,7 @@ public class StepBusinessHotelUrbano {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
+			Thread.interrupted();
 			LOG.error(e.getMessage().toString());
 		}
 		//Navego para o primeiro hotel cinco estrelas
