@@ -1,0 +1,1 @@
+mvn sonar:sonar -Dsonar.sources=java\com\br\projeto\ -Dsonar.java.binaries=target\
